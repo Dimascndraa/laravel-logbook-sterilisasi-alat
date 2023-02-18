@@ -30,7 +30,7 @@
 					<div class="flex-fill">
 						<span class="h5">What are Base Icons?</span>
 						<br>
-						Base Icons are primarily used as a 'base' layer for <strong>Stack Icons</strong>, but may also be used as regular general icons. To see base icons in action see the <a href="icons_stack_showcase.html" target="_blank">Stack Icons Showcase</a> page.
+						Base Icons are primarily used as a 'base' layer for <strong>Stack Icons</strong>, but may also be used as regular general icons. To see base icons in action see the <a href="/icons_stack_showcase" target="_blank">Stack Icons Showcase</a> page.
 					</div>
 				</div>
 			</div>

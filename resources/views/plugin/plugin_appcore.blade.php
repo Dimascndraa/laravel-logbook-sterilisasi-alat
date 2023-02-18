@@ -139,7 +139,7 @@
                                                             <i class="text-muted">-</i>
                                                         </td>
                                                         <td class="fs-sm">
-                                                            Push array to <code>body</code> tag. See <a href="intel_saving_db.html">saving to database</a> for more details
+                                                            Push array to <code>body</code> tag. See <a href="/settings_saving_db">saving to database</a> for more details
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -150,7 +150,7 @@
                                                             <i class="fw-500 text-primary">string</i>
                                                         </td>
                                                         <td class="fs-sm">
-                                                            Fetch class names from <code>body</code> and convert them to JSON string. See <a href="intel_saving_db.html">saving to database</a> for more details
+                                                            Fetch class names from <code>body</code> and convert them to JSON string. See <a href="/settings_saving_db">saving to database</a> for more details
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -298,7 +298,7 @@
                                                             <code>data-panel-*</code>
                                                         </td>
                                                         <td class="fs-sm">
-                                                            Push array to <code>body</code> tag. See <a href="settings_saving_db.html">saving to database</a> for more details
+                                                            Push array to <code>body</code> tag. See <a href="/settings_saving_db">saving to database</a> for more details
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -394,7 +394,7 @@ var myapp_config = {
 	isMobile: (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase())),
 	mobileMenuTrigger: null,
 	mobileResolutionTrigger: 992,
-	isWebkit: ((!!window.chrome && !!window.chrome.webstore) === true || Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0 === true),
+	isWebkit: ((!!window.chrome && !!window.chrome.webstore) === true || Object.prototype.toString.call(windowElement).indexOf('Constructor') > 0 === true),
 	isChrome: (/chrom(e|ium)/.test(navigator.userAgent.toLowerCase())),
 	isIE: ( (window.navigator.userAgent.indexOf('Trident/') ) > 0 === true ),
 	debugState: true,

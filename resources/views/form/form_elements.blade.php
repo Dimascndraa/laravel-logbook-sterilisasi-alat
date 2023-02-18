@@ -219,7 +219,7 @@
                                         <label for="example-gridsize" class="form-label">Grid Sizes</label>
                                     </div>
                                     <div class="col-6 text-right">
-                                        <a href="utilities_responsive_grid.html" title="Responsive Grid" target="_blank">Check out how it works</a>
+                                        <a href="/utilities_responsive_grid" title="Responsive Grid" target="_blank">Check out how it works</a>
                                     </div>
                                 </div>
                                 <div class="row">

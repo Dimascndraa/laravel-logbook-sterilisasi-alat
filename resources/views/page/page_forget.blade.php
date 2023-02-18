@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- 
+<!--
 Template Name:  SmartAdmin Responsive WebApp - Template build with Twitter Bootstrap 4
 Version: 4.0.0
 Author: Sunnyat Ahmmed
@@ -62,7 +62,7 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                                 </div>
                                 <div class="col-xl-6 ml-auto mr-auto">
                                     <div class="card p-4 rounded-plus bg-faded">
-                                        <form id="js-login" novalidate="" action="intel_analytics_dashboard.html">
+                                        <form id="js-login" novalidate="" action="/intel_analytics_dashboard">
                                             <div class="form-group">
                                                 <label class="form-label" for="lostaccount">Your username or email</label>
                                                 <input type="email" id="lostaccount" class="form-control" placeholder="Recovery email" required>
@@ -86,8 +86,8 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                 </div>
             </div>
         </div>
-        <!-- base vendor bundle: 
-			 DOC: if you remove pace.js from core please note on Internet Explorer some CSS animations may execute before a page is fully loaded, resulting 'jump' animations 
+        <!-- base vendor bundle:
+			 DOC: if you remove pace.js from core please note on Internet Explorer some CSS animations may execute before a page is fully loaded, resulting 'jump' animations
 						+ pace.js (recommended)
 						+ jquery.js (core)
 						+ jquery-ui-cust.js (core)

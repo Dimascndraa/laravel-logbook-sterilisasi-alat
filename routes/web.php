@@ -17,19 +17,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('intel.intel_analytics_dashboard');
 });
-
 Route::get('/intel_marketing_dashboard', function () {
     return view('intel.intel_marketing_dashboard');
 });
-
 Route::get('/intel_introduction', function () {
     return view('intel.intel_introduction');
 });
-
 Route::get('/intel_privacy', function () {
     return view('intel.intel_privacy');
 });
-
 Route::get('/intel_build_notes', function () {
     return view('intel.intel_build_notes');
 });
@@ -38,29 +34,23 @@ Route::get('/intel_build_notes', function () {
 Route::get('/settings_how_it_works', function () {
     return view('settings.settings_how_it_works');
 });
-
 Route::get('/settings_layout_options', function () {
     return view('settings.settings_layout_options');
 });
-
 Route::get('/settings_skin_options', function () {
     return view('settings.settings_skin_options');
 });
-
 Route::get('/settings_saving_db', function () {
     return view('settings.settings_saving_db');
 });
 
 // INFO
-
 Route::get('/info_app_docs', function () {
     return view('infoapp.info_app_docs');
 });
-
 Route::get('/info_app_licensing', function () {
     return view('infoapp.info_app_licensing');
 });
-
 Route::get('/info_app_flavors', function () {
     return view('infoapp.info_app_flavors');
 });
@@ -69,211 +59,166 @@ Route::get('/info_app_flavors', function () {
 Route::get('/ui_alerts', function () {
     return view('ui.ui_alerts');
 });
-
 Route::get('/ui_accordion', function () {
     return view('ui.ui_accordion');
 });
-
 Route::get('/ui_badges', function () {
     return view('ui.ui_badges');
 });
-
 Route::get('/ui_breadcrumbs', function () {
     return view('ui.ui_breadcrumbs');
 });
-
 Route::get('/ui_buttons', function () {
     return view('ui.ui_buttons');
 });
-
 Route::get('/ui_button_group', function () {
     return view('ui.ui_button_group');
 });
-
 Route::get('/ui_cards', function () {
     return view('ui.ui_cards');
 });
-
 Route::get('/ui_carousel', function () {
     return view('ui.ui_carousel');
 });
-
 Route::get('/ui_collapse', function () {
     return view('ui.ui_collapse');
 });
-
 Route::get('/ui_dropdowns', function () {
     return view('ui.ui_dropdowns');
 });
-
 Route::get('/ui_list_filter', function () {
     return view('ui.ui_list_filter');
 });
-
 Route::get('/ui_modal', function () {
     return view('ui.ui_modal');
 });
-
 Route::get('/ui_navbars', function () {
     return view('ui.ui_navbars');
 });
-
 Route::get('/ui_panels', function () {
     return view('ui.ui_panels');
 });
-
 Route::get('/ui_pagination', function () {
     return view('ui.ui_pagination');
 });
-
 Route::get('/ui_popovers', function () {
     return view('ui.ui_popovers');
 });
-
 Route::get('/ui_progress_bars', function () {
     return view('ui.ui_progress_bars');
 });
-
 Route::get('/ui_scrollspy', function () {
     return view('ui.ui_scrollspy');
 });
-
 Route::get('/ui_side_panel', function () {
     return view('ui.ui_side_panel');
 });
-
 Route::get('/ui_spinners', function () {
     return view('ui.ui_spinners');
 });
-
 Route::get('/ui_tabs_pills', function () {
     return view('ui.ui_tabs_pills');
 });
-
 Route::get('/ui_toasts', function () {
     return view('ui.ui_toasts');
 });
-
 Route::get('/ui_tooltips', function () {
     return view('ui.ui_tooltips');
 });
 
 // utilities
-
 Route::get('/utilities_borders', function () {
     return view('utilities.utilities_borders');
 });
-
 Route::get('/utilities_clearfix', function () {
     return view('utilities.utilities_clearfix');
 });
-
 Route::get('/utilities_color_pallet', function () {
     return view('utilities.utilities_color_pallet');
 });
-
 Route::get('/utilities_display_property', function () {
     return view('utilities.utilities_display_property');
 });
-
 Route::get('/utilities_fonts', function () {
     return view('utilities.utilities_fonts');
 });
-
 Route::get('/utilities_flexbox', function () {
     return view('utilities.utilities_flexbox');
 });
-
 Route::get('/utilities_helpers', function () {
     return view('utilities.utilities_helpers');
 });
-
 Route::get('/utilities_position', function () {
     return view('utilities.utilities_position');
 });
-
 Route::get('/utilities_responsive_grid', function () {
     return view('utilities.utilities_responsive_grid');
 });
-
 Route::get('/utilities_sizing', function () {
     return view('utilities.utilities_sizing');
 });
-
 Route::get('/utilities_spacing', function () {
     return view('utilities.utilities_spacing');
 });
-
 Route::get('/utilities_typography', function () {
     return view('utilities.utilities_typography');
 });
 
 //font
-
 Route::get('/icons_fontawesome_light', function () {
     return view('icons.icons_fontawesome_light');
 });
-
 Route::get('/icons_fontawesome_regular', function () {
     return view('icons.icons_fontawesome_regular');
 });
-
 Route::get('/icons_fontawesome_solid', function () {
     return view('icons.icons_fontawesome_solid');
 });
-
 Route::get('/icons_fontawesome_brand', function () {
     return view('icons.icons_fontawesome_brand');
 });
-
 Route::get('/icons_nextgen_general', function () {
     return view('icons.icons_nextgen_general');
 });
-
 Route::get('/icons_nextgen_base', function () {
     return view('icons.icons_nextgen_base');
 });
-
 Route::get('/icons_stack_showcase', function () {
     return view('icons.icons_stack_showcase');
 });
-
 Route::get('/icons_stack_generate', function () {
     return view('icons.icons_stack_generate');
 });
-
 
 //tabel
 Route::get('/tables_basic', function () {
     return view('tables.tables_basic');
 });
-
 Route::get('/tables_generate_style', function () {
     return view('tables.tables_generate_style');
 });
-
 
 //Form Stuff
 Route::get('/form_basic_inputs', function () {
     return view('form.form_basic_inputs');
 });
-
 Route::get('/form_checkbox_radio', function () {
     return view('form.form_checkbox_radio');
 });
-
 Route::get('/form_input_groups', function () {
     return view('form.form_input_groups');
 });
-
 Route::get('/form_validation', function () {
     return view('form.form_validation');
 });
 Route::get('/form_elements', function () {
     return view('form.form_elements');
 });
-//Core Plugins
+Route::get('/form_samples', function () {
+    return view('form.form_samples');
+});
 
+//Plugins
 Route::get('/plugin_faq', function () {
     return view('plugin.plugin_faq');
 });
@@ -305,8 +250,7 @@ Route::get('/plugin_appcore', function () {
     return view('plugin.plugin_appcore');
 });
 
-//datatabel
-
+//datatables
 Route::get('/datatables_basic', function () {
     return view('datatables.datatables_basic');
 });
@@ -356,8 +300,7 @@ Route::get('/datatables_alteditor', function () {
     return view('datatables.datatables_alteditor');
 });
 
-// statistik
-
+// statistics
 Route::get('/statistics_flot', function () {
     return view('statistics.statistics_flot');
 });
@@ -384,17 +327,14 @@ Route::get('/statistics_dygraph', function () {
 });
 
 //notifikasi
-
 Route::get('/notifications_sweetalert2', function () {
     return view('notifications.notifications_sweetalert2');
 });
-
 Route::get('/notifications_toastr', function () {
     return view('notifications.notifications_toastr');
 });
 
 //form plugins
-
 Route::get('/form_plugins_colorpicker', function () {
     return view('formplugins.form_plugins_colorpicker');
 });
@@ -424,17 +364,14 @@ Route::get('/form_plugin_summernote', function () {
 });
 
 //Miscellaneous
-
 Route::get('/miscellaneous_fullcalendar', function () {
     return view('miscellaneous.miscellaneous_fullcalendar');
 });
-
 Route::get('/miscellaneous_lightgallery', function () {
     return view('miscellaneous.miscellaneous_lightgallery');
 });
 
 //Page Views
-
 Route::get('/page_chat', function () {
     return view('page.page_chat');
 });
@@ -443,7 +380,6 @@ Route::get('/page_contacts', function () {
 });
 
 // Forum
-
 Route::get('/page_forum_list', function () {
     return view('page.page_forum_list');
 });
@@ -458,67 +394,53 @@ Route::get('/page_forum_discussion', function () {
 Route::get('/page_inbox_general', function () {
     return view('page.page_inbox_general');
 });
-
 Route::get('/page_inbox_read', function () {
     return view('page.page_inbox_read');
 });
-
 Route::get('/page_inbox_write', function () {
     return view('page.page_inbox_write');
 });
 
 //Invoice (printable)
-
 Route::get('/page_invoice', function () {
     return view('page.page_invoice');
 });
-
 
 //Authentication
 Route::get('/page_forget', function () {
     return view('page.page_forget');
 });
-
 Route::get('/page_locked', function () {
     return view('page.page_locked');
 });
-
 Route::get('/page_login', function () {
     return view('page.page_login');
 });
-
 Route::get('/page_login-alt', function () {
     return view('page.page_login-alt');
 });
-
 Route::get('/page_register', function () {
     return view('page.page_register');
 });
-
 Route::get('/page_confirmation', function () {
     return view('page.page_confirmation');
 });
 
 //Error Pages
-
 Route::get('/page_error', function () {
     return view('page.page_error');
 });
-
 Route::get('/page_error_404', function () {
     return view('page.page_error_404');
 });
-
 Route::get('/page_error_announced', function () {
     return view('page.page_error_announced');
 });
 
 //Profile
-
 Route::get('/page_profile', function () {
     return view('page.page_profile');
 });
-
 
 //search
 Route::get('/page_search', function () {
@@ -528,15 +450,5 @@ Route::get('/page_search', function () {
 //blank
 Route::get('/blank', function () {
     return view('page.blank');
-});
-
-
-//search
-Route::get('/form_samples', function () {
-    return view('form_samples');
-});
-
-Route::get('/icons_construct_', function () {
-    return view('icons_construct_');
 });
 

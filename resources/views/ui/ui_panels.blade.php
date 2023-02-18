@@ -1,5 +1,5 @@
 @extends('inc.layout')
-@section('title','UI Panels')		
+@section('title','UI Panels')
 @section('menuui_components','active open')
 @section('menuui_panels','active')
 @section('content')
@@ -29,7 +29,7 @@
 			The <code>.panel</code> containers are a perfect vessle to display your data, tables, forms or pictures. They are extreamly lightweight and clean. They can be expanded to fullscreen, collapsed or closed. They come with varity of options to display your data uniquely and draw focus where it is needed. Print the panel you need by making it fullscreen. You can also uniform the panels by adding the modifier <code>.mod-panel-clean</code> to <code>body</code>
 			<br>
 			<br>
-			Give user access to create panel settings using localstorage. You can change colors, remember collapse state, lock location, and add drag functions to panels. Be sure to check out the our exclusive <a href="plugin_smartpanels.html" target="_blank">SmartPanels</a> plugin.
+			Give user access to create panel settings using localstorage. You can change colors, remember collapse state, lock location, and add drag functions to panels. Be sure to check out the our exclusive <a href="/plugin_smartpanels" target="_blank">SmartPanels</a> plugin.
 		</div>
 		<div class="row">
 			<div class="col-xl-6">
@@ -225,7 +225,7 @@
 					<div class="panel-container show">
 						<div class="panel-content">
 							<div class="panel-tag">
-								You may place badge inside <code>.panel-toolbar</code>, <code>.panel-content</code> and <code>.panel-hdr</code>. Check out the <a href="ui_badges.html" target="_blank">badge page</a> to learn more about badges
+								You may place badge inside <code>.panel-toolbar</code>, <code>.panel-content</code> and <code>.panel-hdr</code>. Check out the <a href="/ui_badges" target="_blank">badge page</a> to learn more about badges
 							</div>
 						</div>
 						<!-- panel footer with utility classes -->

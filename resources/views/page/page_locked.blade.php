@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- 
+<!--
 Template Name:  SmartAdmin Responsive WebApp - Template build with Twitter Bootstrap 4
 Version: 4.0.0
 Author: Sunnyat Ahmmed
@@ -69,7 +69,7 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                                     </div>
                                 </div>
                                 <div class="text-center">
-                                    <a href="page_login-alt.html" class="text-white opacity-90">Not Dr. Codex Lantern ?</a>
+                                    <a href="/page_login-alt" class="text-white opacity-90">Not Dr. Codex Lantern ?</a>
                                 </div>
                             </form>
                             <div class="position-absolute pos-bottom pos-left pos-right p-3 text-center text-white">
@@ -80,8 +80,8 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                 </div>
             </div>
         </div>
-        <!-- base vendor bundle: 
-			 DOC: if you remove pace.js from core please note on Internet Explorer some CSS animations may execute before a page is fully loaded, resulting 'jump' animations 
+        <!-- base vendor bundle:
+			 DOC: if you remove pace.js from core please note on Internet Explorer some CSS animations may execute before a page is fully loaded, resulting 'jump' animations
 						+ pace.js (recommended)
 						+ jquery.js (core)
 						+ jquery-ui-cust.js (core)

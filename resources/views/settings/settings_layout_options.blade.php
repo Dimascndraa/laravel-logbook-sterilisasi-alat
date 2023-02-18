@@ -34,7 +34,7 @@
 					<div class="flex-fill">
 						<span class="h5">Settings Panel</span>
 						<br>
-						You can reset the changes at anytime by clicking the reset button found in the <a href="#" class="fw-500" data-toggle="modal" data-target=".js-modal-settings">settings panel</a>. To enable these settings through scripts, <strong>e.g.</strong> <code> initApp.pushSettings("header-function-fixed, nav-function-fixed")</code>, see the <a href="settings_saving_db.html" class="fw-500">saving to database</a> page.
+						You can reset the changes at anytime by clicking the reset button found in the <a href="#" class="fw-500" data-toggle="modal" data-target=".js-modal-settings">settings panel</a>. To enable these settings through scripts, <strong>e.g.</strong> <code> initApp.pushSettings("header-function-fixed, nav-function-fixed")</code>, see the <a href="/settings_saving_db" class="fw-500">saving to database</a> page.
 					</div>
 				</div>
 			</div>

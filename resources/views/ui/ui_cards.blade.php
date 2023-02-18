@@ -33,7 +33,7 @@
 				<div class="d-flex flex-fill">
 					<div class="flex-fill">
 						<span class="h5">About</span>
-						<p>Cards are built with as little markup and styles as possible, but still manage to deliver a ton of control and customization. Built with flexbox, they offer easy alignment and mix well with other Bootstrap components. They have no <code>margin</code> by default, so use spacing utilities as needed. Although cards are a lightweight solution for 'widget' or 'panel', we recommend you check out SmartAdmin's <a href="ui_panels.html" title="Components Panels" target="_blank">panels page</a> for further flexible and an alternative option.</p>
+						<p>Cards are built with as little markup and styles as possible, but still manage to deliver a ton of control and customization. Built with flexbox, they offer easy alignment and mix well with other Bootstrap components. They have no <code>margin</code> by default, so use spacing utilities as needed. Although cards are a lightweight solution for 'widget' or 'panel', we recommend you check out SmartAdmin's <a href="/ui_panels" title="Components Panels" target="_blank">panels page</a> for further flexible and an alternative option.</p>
 						<p class="mb-0">While we displayed some examples of cards here, you can learn more details of its usage at the official <a href="https://getbootstrap.com/docs/4.3/components/card/" target="_blank">bootstrap documentation</a>.</p>
 					</div>
 				</div>
@@ -189,7 +189,7 @@
 					<div class="panel-container show">
 						<div class="panel-content">
 							<div class="panel-tag">
-								<code>.card-header</code>, <code>.card-body</code>, and <code>.card-footer</code> background cam be changed using <a href="utilities_color_pallet.html" target="_blank" title="BG Color Utility">color</a> and <a href="utilities_borders.html" target="_blank" title="border utilities">border</a> utilities
+								<code>.card-header</code>, <code>.card-body</code>, and <code>.card-footer</code> background cam be changed using <a href="/utilities_color_pallet" target="_blank" title="BG Color Utility">color</a> and <a href="/utilities_borders" target="_blank" title="border utilities">border</a> utilities
 							</div>
 							<!-- demo controls -->
 							<div class="mb-g">

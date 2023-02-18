@@ -19,7 +19,7 @@
 		<div class="ie-only alert alert-danger d-none">
 			<h4>This message is visible to IE users only!</h4>
 			<p>
-				This specific layout structure you are trying to view is buggy on Internet Explorer, which may cause the container to stretch. This is a bug within flexbox and IE, unfortunately there is no direct solution. The workaround would be to contain the box with <code>.d-block</code> and <code>.position-absolute</code> with defined width <code>.w-100</code> and height <code>.h-100</code>. To see a working example of this, check out our <a href="page_inbox_general.html" target="_blank"> Inbox page </a> which uses the same layout structure with a bit of tweaking.
+				This specific layout structure you are trying to view is buggy on Internet Explorer, which may cause the container to stretch. This is a bug within flexbox and IE, unfortunately there is no direct solution. The workaround would be to contain the box with <code>.d-block</code> and <code>.position-absolute</code> with defined width <code>.w-100</code> and height <code>.h-100</code>. To see a working example of this, check out our <a href="/page_inbox_general" target="_blank"> Inbox page </a> which uses the same layout structure with a bit of tweaking.
 			</p>
 		</div>
 		<!-- notice the utilities added to the wrapper below -->

@@ -552,26 +552,6 @@
     </main>
 @endsection
 @section('plugin')
-        <!-- datatble responsive bundle contains:
-	+ jquery.dataTables.js
-	+ dataTables.bootstrap4.js
-	+ dataTables.autofill.js
-	+ dataTables.buttons.js
-	+ buttons.bootstrap4.js
-	+ buttons.html5.js
-	+ buttons.print.js
-	+ buttons.colVis.js
-	+ dataTables.colreorder.js
-	+ dataTables.fixedcolumns.js
-	+ dataTables.fixedheader.js
-	+ dataTables.keytable.js
-	+ dataTables.responsive.js
-	+ dataTables.rowgroup.js
-	+ dataTables.rowreorder.js
-	+ dataTables.scroller.js
-	+ dataTables.select.js
-	+ datatables.styles.app.js
-	+ datatables.styles.buttons.app.js -->
         <script src="js/datagrid/datatables/datatables.bundle.js"></script>
         <script>
             $(document).ready(function()

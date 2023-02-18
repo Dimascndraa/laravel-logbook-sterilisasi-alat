@@ -1,7 +1,5 @@
 @extends('inc.layout')
 @section('title','Form Samples')
-@section('menuform_stuff','active open')
-@section('menuform_samples','active')
 @section('content')
     <main id="js-page-content" role="main" class="page-content">
         <ol class="breadcrumb page-breadcrumb">

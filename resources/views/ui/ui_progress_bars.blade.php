@@ -136,7 +136,7 @@
 					<div class="panel-container show">
 						<div class="panel-content">
 							<div class="panel-tag">
-								Control the background by adding avaialble <a href="utilities_color_pallet.html" target="_blank">color pallets</a> to <code>.progress</code> class
+								Control the background by adding avaialble <a href="/utilities_color_pallet" target="_blank">color pallets</a> to <code>.progress</code> class
 							</div>
 							<div class="demo-v-spacing">
 								<div class="progress">
@@ -203,7 +203,7 @@
 					<div class="panel-container show">
 						<div class="panel-content">
 							<div class="panel-tag">
-								Control the background by adding avaialble <a href="utilities_color_pallet.html" target="_blank">color pallets</a> to <code>.progress</code> class
+								Control the background by adding avaialble <a href="/utilities_color_pallet" target="_blank">color pallets</a> to <code>.progress</code> class
 							</div>
 							<div class="demo-v-spacing">
 								<div class="progress">

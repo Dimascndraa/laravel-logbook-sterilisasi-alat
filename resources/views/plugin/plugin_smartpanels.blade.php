@@ -127,7 +127,7 @@
                                             <div class="panel-container show">
                                                 <div class="panel-content border-faded border-top-0 border-right-0 border-left-0">
                                                     <div class="panel-tag m-0 rounded-0">
-                                                        You can place any visual elements to the content area, and have multiple <code>.panel-content</code>. Check out the <a href="ui_panels.html">general panels</a> page for more examples of what you can add to panel headers and panel footer
+                                                        You can place any visual elements to the content area, and have multiple <code>.panel-content</code>. Check out the <a href="/ui_panels">general panels</a> page for more examples of what you can add to panel headers and panel footer
                                                     </div>
                                                 </div>
                                                 <!-- panel toolbar extended -->

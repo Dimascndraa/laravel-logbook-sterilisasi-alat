@@ -54,7 +54,7 @@
 					<div class="panel-container show">
 						<div class="panel-content">
 							<div class="panel-tag">
-								Display utility classes that apply to all <a href="utilities_responsive_grid.html" target="_blank">breakpoints</a>, from <code>xs</code> to <code>xl</code>, have no breakpoint abbreviation in them. This is because those classes are applied from <code>min-width: 0;</code> and up, and thus are not bound by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation
+								Display utility classes that apply to all <a href="/utilities_responsive_grid" target="_blank">breakpoints</a>, from <code>xs</code> to <code>xl</code>, have no breakpoint abbreviation in them. This is because those classes are applied from <code>min-width: 0;</code> and up, and thus are not bound by a media query. The remaining breakpoints, however, do include a breakpoint abbreviation
 							</div>
 							<p>As such, the classes are named using the format:</p>
 							<ul class="list-spaced">

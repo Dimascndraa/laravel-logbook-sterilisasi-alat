@@ -149,7 +149,7 @@
 				<h3 class="fw-500 m-0">
 					Plugin licenses
 					<small class="m-0">
-						Use of an item is bound by the license you purchase. A license grants you a non-exclusive and non-transferable right to use and incorporate the item in your personal or commercial projects. All third party plugins used in SmartAdmin WebApp are MIT or Customized license (license catered for redistrubtion with this theme). Please check the <a href="info_app_docs.html">documentation page</a> under plugins section for details about each plugin.
+						Use of an item is bound by the license you purchase. A license grants you a non-exclusive and non-transferable right to use and incorporate the item in your personal or commercial projects. All third party plugins used in SmartAdmin WebApp are MIT or Customized license (license catered for redistrubtion with this theme). Please check the <a href="/info_app_docs">documentation page</a> under plugins section for details about each plugin.
 					</small>
 				</h3>
 			</div>
@@ -159,7 +159,7 @@
 				<h3 class="fw-500 m-0">
 					Image licenses
 					<small class="m-0">
-						Some images used in this template are gathered from <a href="https://www.pexels.com" target="_blank">pexels.com</a>, where images are free to use for personal and commercial projects, attribution is not required. Giving credit to the photographer or Pexels is not necessary. One or more images or video was purchased from <a href="photodune.net" target="_blank">photodune.net</a> whereby we own the extended license for the image / video and the rights to redistribute with SmartAdmin WebApp. All the images used in the gallery page was gatherd from <a href="https://unsplash.com/license" target="_blank">unsplash.com</a>, whereby you do not need to ask permission from or provide credit to the photographer or Unsplash.
+						Some images used in this template are gathered from <a href="https://www.pexels.com" target="_blank">pexels.com</a>, where images are free to use for personal and commercial projects, attribution is not required. Giving credit to the photographer or Pexels is not necessary. One or more images or video was purchased from <a href="https://photodune.net" target="_blank">photodune.net</a> whereby we own the extended license for the image / video and the rights to redistribute with SmartAdmin WebApp. All the images used in the gallery page was gatherd from <a href="https://unsplash.com/license" target="_blank">unsplash.com</a>, whereby you do not need to ask permission from or provide credit to the photographer or Unsplash.
 					</small>
 				</h3>
 			</div>

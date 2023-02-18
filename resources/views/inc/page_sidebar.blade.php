@@ -249,7 +249,7 @@
                     <span class="nav-link-text" data-i18n="nav.utilities">Utilities</span>
                 </a>
                 <ul>
-                        <li class="{{ set_active('utilities_borders') }}">
+                    <li class="{{ set_active('utilities_borders') }}">
                         <a href="/utilities_borders" title="Borders" data-filter-tags="utilities borders">
                             <span class="nav-link-text" data-i18n="nav.utilities_borders">Borders</span>
                         </a>

@@ -405,7 +405,7 @@
 					<div class="panel-container show">
 						<div class="panel-content">
 							<div class="panel-tag">
-								Use the included <a href="utilities_color_pallet.html" target="_blank">color utilities</a> to change background and text colors. Below are examples of nested badge with different background colors
+								Use the included <a href="/utilities_color_pallet" target="_blank">color utilities</a> to change background and text colors. Below are examples of nested badge with different background colors
 							</div>
 							<div class="frame-wrap">
 								<div class="demo">
