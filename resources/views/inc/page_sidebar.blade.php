@@ -34,14 +34,20 @@
             </a>
         </div>
         <ul id="js-nav-menu" class="nav-menu">
-            <li class="{{ set_active_mainmenu(['/','intel_marketing_dashboard','intel_introduction','intel_privacy','intel_build_notes']) }}">
+            <li class="{{ set_active('/') }}">
+                <a href="/" title="Dashboard" data-filter-tags="application dashboard">
+                    <i class="fal fa-home"></i>
+                    <span class="nav-link-text" data-i18n="nav.application_dashboard">Dashboard</span>
+                </a>
+            </li>
+            <li class="{{ set_active_mainmenu(['intel_analytics_dashboard','intel_marketing_dashboard','intel_introduction','intel_privacy','intel_build_notes']) }}">
                 <a href="#" title="Application Intel" data-filter-tags="application intel">
                     <i class="fal fa-info-circle"></i>
                     <span class="nav-link-text" data-i18n="nav.application_intel">Application Intel</span>
                 </a>
                 <ul>
-                    <li class="{{ set_active('/') }}">
-                        <a href="/" title="Analytics Dashboard" data-filter-tags="application intel analytics dashboard">
+                    <li class="{{ set_active('intel_analytics_dashboard') }}">
+                        <a href="/intel_analytics_dashboard" title="Analytics Dashboard" data-filter-tags="application intel analytics dashboard">
                             <span class="nav-link-text" data-i18n="nav.application_intel_analytics_dashboard">Analytics Dashboard</span>
                         </a>
                     </li>
@@ -68,7 +74,7 @@
                     </li>
                 </ul>
             </li>
-            <li class="{{ set_active_mainmenu(['settings_how_it_works','settings_layout_options','settings_skin_options','settings_saving_db']) }}">
+            <li class="{{ set_active_mainmenu(['settings_how_it_works','settings_layout_options','settings_theme_modes','settings_skin_options','settings_saving_db']) }}">
                 <a href="#" title="Theme Settings" data-filter-tags="theme settings">
                     <i class="fal fa-cog"></i>
                     <span class="nav-link-text" data-i18n="nav.theme_settings">Theme Settings</span>
@@ -82,6 +88,11 @@
                     <li class="{{ set_active('settings_layout_options') }}">
                         <a href="/settings_layout_options" title="Layout Options" data-filter-tags="theme settings layout options">
                             <span class="nav-link-text" data-i18n="nav.theme_settings_layout_options">Layout Options</span>
+                        </a>
+                    </li>
+                    <li class="{{ set_active('settings_theme_modes') }}">
+                        <a href="/settings_theme_modes" title="Theme Modes (beta)" data-filter-tags="theme settings theme modes (beta)">
+                            <span class="nav-link-text" data-i18n="nav.theme_settings_theme_modes_(beta)">Theme Modes (beta)</span>
                         </a>
                     </li>
                     <li class="{{ set_active('settings_skin_options') }}">

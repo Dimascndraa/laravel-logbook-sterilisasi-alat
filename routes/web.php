@@ -12,9 +12,11 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-// INTEL
 Route::get('/', function () {
+    return view('intel.intel_dashboard');
+});
+// INTEL
+Route::get('/intel_analytics_dashboard', function () {
     return view('intel.intel_analytics_dashboard');
 });
 Route::get('/intel_marketing_dashboard', function () {
@@ -36,6 +38,9 @@ Route::get('/settings_how_it_works', function () {
 });
 Route::get('/settings_layout_options', function () {
     return view('settings.settings_layout_options');
+});
+Route::get('/settings_theme_modes', function () {
+    return view('settings.settings_theme_modes');
 });
 Route::get('/settings_skin_options', function () {
     return view('settings.settings_skin_options');

@@ -48,13 +48,18 @@
                 <i class="fal fa-search"></i>
             </a>
         </div>
+
         <!-- app settings -->
+        @if($settings_app=="Y")
         <div class="hidden-md-down">
             <a href="#" class="header-icon" data-toggle="modal" data-target=".js-modal-settings">
                 <i class="fal fa-cog"></i>
             </a>
         </div>
+        @else @endif
+
         <!-- app shortcuts -->
+        @if($my_app=="Y")
         <div>
             <a href="#" class="header-icon" data-toggle="dropdown" title="My Apps">
                 <i class="fal fa-cube"></i>
@@ -221,12 +226,18 @@
                 </div>
             </div>
         </div>
+        @else @endif
+
         <!-- app message -->
+        @if($message_app=="Y")
         <a href="#" class="header-icon" data-toggle="modal" data-target=".js-modal-messenger">
             <i class="fal fa-globe"></i>
             <span class="badge badge-icon">!</span>
         </a>
+        @else @endif
+
         <!-- app notification -->
+        @if($notification_app=="Y")
         <div>
             <a href="#" class="header-icon" data-toggle="dropdown" title="You got 11 notifications">
                 <i class="fal fa-bell"></i>
@@ -583,6 +594,7 @@
                 </div>
             </div>
         </div>
+        @else @endif
         <!-- app user menu -->
         <div>
             <a href="#" data-toggle="dropdown" title="drlantern@gotbootstrap.com" class="header-icon d-flex align-items-center justify-content-center ml-2">
@@ -639,6 +651,7 @@
                 </a>
             </div>
         </div>
+
     </div>
 </header>
 <!-- END Page Header -->

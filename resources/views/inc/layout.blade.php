@@ -11,13 +11,18 @@
                 <!-- END Left Aside -->
                 <div class="page-content-wrapper">
                     <!-- BEGIN Page Header -->
-					@include('inc.page_header')
+					@include('inc.page_header',[
+                        "settings_app" => "N",
+                        "my_app" => "N",
+                        "message_app" => "N",
+                        "notification_app" => "N"
+                        ])
                     <!-- END Page Header -->
                     <!-- BEGIN Page Content -->
                     <!-- the #js-page-content id is needed for some plugins to initialize -->
 					@yield('content')
                     <!-- this overlay is activated only when mobile menu is triggered -->
-                    <div class="page-content-overlay" data-action="toggle" data-class="mobile-nav-on"></div> 
+                    <div class="page-content-overlay" data-action="toggle" data-class="mobile-nav-on"></div>
 					<!-- END Page Content -->
                     <!-- BEGIN Page Footer -->
 					@include('inc.footer')
@@ -34,10 +39,10 @@
 		@include('inc.quickmenu')
         <!-- END Quick Menu -->
         <!-- BEGIN Messenger -->
-        @include('inc.messenger') 
+        @include('inc.messenger')
 		<!-- END Messenger -->
         <!-- BEGIN Page Settings -->
-        @include('inc.setting')  
+        @include('inc.setting')
 		<!-- END Page Settings -->
 		@include('inc.script_footer')
     </body>
