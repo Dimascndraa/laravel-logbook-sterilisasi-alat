@@ -1,7 +1,5 @@
 @extends('inc.layout')
-@section('title','UI Tabs & Accordions')		
-@section('menuui_components','active open')
-@section('menuui_tabs_pills','active')
+@section('title','UI Tabs & Accordions')
 @section('content')
 	<main id="js-page-content" role="main" class="page-content">
 		<ol class="breadcrumb page-breadcrumb">
