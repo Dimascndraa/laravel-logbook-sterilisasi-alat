@@ -1,20 +1,20 @@
 <!-- DOC: script to save and load page settings -->
 <script>
     /**
-     *	This script should be placed right after the body tag for fast execution 
+     *	This script should be placed right after the body tag for fast execution
         *	Note: the script is written in pure javascript and does not depend on thirdparty library
         **/
     'use strict';
 
     var classHolder = document.getElementsByTagName("BODY")[0],
-        /** 
+        /**
          * Load from localstorage
          **/
         themeSettings = (localStorage.getItem('themeSettings')) ? JSON.parse(localStorage.getItem('themeSettings')) :
         {},
         themeURL = themeSettings.themeURL || '',
         themeOptions = themeSettings.themeOptions || '';
-    /** 
+    /**
      * Load theme options
      **/
     if (themeSettings.themeOptions)
@@ -34,8 +34,8 @@
         cssfile.href = themeURL;
         document.getElementsByTagName('head')[0].appendChild(cssfile);
     }
-    /** 
-     * Save to localstorage 
+    /**
+     * Save to localstorage
      **/
     var saveSettings = function()
     {
@@ -49,7 +49,7 @@
         };
         localStorage.setItem('themeSettings', JSON.stringify(themeSettings));
     }
-    /** 
+    /**
      * Reset settings
      **/
     var resetSettings = function()
