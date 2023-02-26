@@ -572,7 +572,7 @@ gulp build-nav
             {
 
                 var jsdisplay = $('#js-display');
-                var url = "media/data/plugin-reference.json";
+                var url = "/media/data/plugin-reference.json";
 
                 $.getJSON(url, function(data)
                 {

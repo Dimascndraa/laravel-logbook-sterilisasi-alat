@@ -1,8 +1,5 @@
 @extends('inc.layout')
 @section('title','Page View Inbox General')
-@section('menupages','active open')
-@section('menupages_inbox','active open')
-@section('menupage_inbox_general','active')
 @section('tmp_body','nav-function-minify layout-composed')
 @section('content')
     <main id="js-page-content" role="main" class="page-content">

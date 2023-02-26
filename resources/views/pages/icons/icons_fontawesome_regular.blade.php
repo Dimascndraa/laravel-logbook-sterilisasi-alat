@@ -117,7 +117,7 @@
 		var prefix_extend = "fa" //fa-icon
 
 		/*JSON file that will be loaded*/
-		var filename = "media/data/fa-icon-list"; //available JSON files [ng-icon-base, ng-icon-list, ng-text-colors, fa-brand-list, fa-icon-list]
+		var filename = "/media/data/fa-icon-list"; //available JSON files [ng-icon-base, ng-icon-list, ng-text-colors, fa-brand-list, fa-icon-list]
 
 		/*execute code*/
 		$.getJSON(filename + ".json").then(function(data)

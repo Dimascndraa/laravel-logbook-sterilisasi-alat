@@ -663,11 +663,3 @@
         </div>
     </main>
 @endsection
-@section('plugin')
-        <script>
-            $(document).ready(function() {
-
-            });
-
-        </script>
-@endsection

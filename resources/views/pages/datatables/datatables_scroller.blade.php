@@ -82,7 +82,7 @@
                     stateSave: true, //remembers your table settings (filter, scroll point, sort, etc)
                     processing: true,
                     pageLength: false,
-                    sAjaxSource: 'media/data/2500.json',
+                    sAjaxSource: '/media/data/2500.json',
                     deferRender: true,
                     scrollY: 300,
                     scrollCollapse: true,

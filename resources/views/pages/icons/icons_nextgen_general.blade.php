@@ -116,7 +116,7 @@
 		var prefix_extend = "ni" //fa-icon
 
 		/*JSON file that will be loaded*/
-		var filename = "media/data/ng-icon-list"; //available JSON files [ng-icon-base, ng-icon-list, ng-text-colors, fa-brand-list, fa-icon-list]
+		var filename = "/media/data/ng-icon-list"; //available JSON files [ng-icon-base, ng-icon-list, ng-text-colors, fa-brand-list, fa-icon-list]
 
 		/*execute code*/
 		$.getJSON(filename + ".json").then(function(data)

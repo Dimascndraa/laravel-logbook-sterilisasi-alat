@@ -123,7 +123,7 @@
 		var prefix_extend = ""
 
 		// file that will be filtered
-		var filename = "media/data/ng-icon-base.json";
+		var filename = "/media/data/ng-icon-base.json";
 
 		$.getJSON(filename).then(function(data)
 			{

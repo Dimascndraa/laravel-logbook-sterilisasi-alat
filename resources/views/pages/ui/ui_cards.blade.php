@@ -653,7 +653,7 @@
 
 
             var ng_bgColors,
-                ng_bgColors_URL = "media/data/ng-bg-colors.json",
+                ng_bgColors_URL = "/media/data/ng-bg-colors.json",
                 formatBgColors = [];
 
             $.when(
