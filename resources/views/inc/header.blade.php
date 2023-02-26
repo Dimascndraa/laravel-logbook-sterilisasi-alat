@@ -10,39 +10,39 @@
 <!-- Remove Tap Highlight on Windows Phone IE -->
 <meta name="msapplication-tap-highlight" content="no">
 <!-- base css -->
-<link rel="stylesheet" media="screen, print" href="css/vendors.bundle.css">
-<link rel="stylesheet" media="screen, print" href="css/app.bundle.css">
-<link id="mythemes" rel="stylesheet" media="screen, print" href="css/themes/cust-theme-3.css">
-<link id="myskins" rel="stylesheet" media="screen, print" href="css/skins/skin-master.css">
+<link rel="stylesheet" media="screen, print" href="/css/vendors.bundle.css">
+<link rel="stylesheet" media="screen, print" href="/css/app.bundle.css">
+<link id="mythemes" rel="stylesheet" media="screen, print" href="/css/themes/cust-theme-3.css">
+<link id="myskins" rel="stylesheet" media="screen, print" href="/css/skins/skin-master.css">
 <!-- Place favicon.ico in the root directory -->
-<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-<link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
-<link rel="stylesheet" media="screen, print" href="css/miscellaneous/reactions/reactions.css">
-<link rel="stylesheet" media="screen, print" href="css/miscellaneous/fullcalendar/fullcalendar.bundle.css">
-<link rel="stylesheet" media="screen, print" href="css/miscellaneous/jqvmap/jqvmap.bundle.css">
-<link rel="stylesheet" media="screen, print" href="css/fa-brands.css">
-<link rel="stylesheet" media="screen, print" href="css/fa-regular.css">
-<link rel="stylesheet" media="screen, print" href="css/fa-solid.css">
-<link rel="stylesheet" media="screen, print" href="css/datagrid/datatables/datatables.bundle.css">
-<link rel="stylesheet" media="screen, print" href="css/statistics/chartjs/chartjs.css">
-<link rel="stylesheet" media="screen, print" href="css/statistics/chartist/chartist.css">
-<link rel="stylesheet" media="screen, print" href="css/statistics/c3/c3.css">
-<link rel="stylesheet" media="screen, print" href="css/statistics/dygraph/dygraph.css">
-<link rel="stylesheet" media="screen, print" href="css/notifications/sweetalert2/sweetalert2.bundle.css">
-<link rel="stylesheet" media="screen, print" href="css/notifications/toastr/toastr.css">
-<link rel="stylesheet" media="screen, print" href="css/formplugins/bootstrap-colorpicker/bootstrap-colorpicker.css">
-<link rel="stylesheet" media="screen, print" href="css/formplugins/bootstrap-datepicker/bootstrap-datepicker.css">
-<link rel="stylesheet" media="screen, print" href="css/formplugins/bootstrap-daterangepicker/bootstrap-daterangepicker.css">
-<link rel="stylesheet" media="screen, print" href="css/formplugins/dropzone/dropzone.css">
-<link rel="stylesheet" media="screen, print" href="css/formplugins/ion-rangeslider/ion-rangeslider.css">
-<link rel="stylesheet" media="screen, print" href="css/formplugins/cropperjs/cropper.css">
-<link rel="stylesheet" media="screen, print" href="css/formplugins/select2/select2.bundle.css">
-<link rel="stylesheet" media="screen, print" href="css/formplugins/summernote/summernote.css">
-<link rel="stylesheet" media="screen, print" href="css/miscellaneous/fullcalendar/fullcalendar.bundle.css">
-<link rel="stylesheet" media="screen, print" href="css/miscellaneous/lightgallery/lightgallery.bundle.css">
-<link rel="stylesheet" media="screen, print" href="css/page-invoice.css">
-<link rel="stylesheet" media="screen, print" href="css/theme-demo.css">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+<link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="stylesheet" media="screen, print" href="/css/miscellaneous/reactions/reactions.css">
+<link rel="stylesheet" media="screen, print" href="/css/miscellaneous/fullcalendar/fullcalendar.bundle.css">
+<link rel="stylesheet" media="screen, print" href="/css/miscellaneous/jqvmap/jqvmap.bundle.css">
+<link rel="stylesheet" media="screen, print" href="/css/fa-brands.css">
+<link rel="stylesheet" media="screen, print" href="/css/fa-regular.css">
+<link rel="stylesheet" media="screen, print" href="/css/fa-solid.css">
+<link rel="stylesheet" media="screen, print" href="/css/datagrid/datatables/datatables.bundle.css">
+<link rel="stylesheet" media="screen, print" href="/css/statistics/chartjs/chartjs.css">
+<link rel="stylesheet" media="screen, print" href="/css/statistics/chartist/chartist.css">
+<link rel="stylesheet" media="screen, print" href="/css/statistics/c3/c3.css">
+<link rel="stylesheet" media="screen, print" href="/css/statistics/dygraph/dygraph.css">
+<link rel="stylesheet" media="screen, print" href="/css/notifications/sweetalert2/sweetalert2.bundle.css">
+<link rel="stylesheet" media="screen, print" href="/css/notifications/toastr/toastr.css">
+<link rel="stylesheet" media="screen, print" href="/css/formplugins/bootstrap-colorpicker/bootstrap-colorpicker.css">
+<link rel="stylesheet" media="screen, print" href="/css/formplugins/bootstrap-datepicker/bootstrap-datepicker.css">
+<link rel="stylesheet" media="screen, print" href="/css/formplugins/bootstrap-daterangepicker/bootstrap-daterangepicker.css">
+<link rel="stylesheet" media="screen, print" href="/css/formplugins/dropzone/dropzone.css">
+<link rel="stylesheet" media="screen, print" href="/css/formplugins/ion-rangeslider/ion-rangeslider.css">
+<link rel="stylesheet" media="screen, print" href="/css/formplugins/cropperjs/cropper.css">
+<link rel="stylesheet" media="screen, print" href="/css/formplugins/select2/select2.bundle.css">
+<link rel="stylesheet" media="screen, print" href="/css/formplugins/summernote/summernote.css">
+<link rel="stylesheet" media="screen, print" href="/css/miscellaneous/fullcalendar/fullcalendar.bundle.css">
+<link rel="stylesheet" media="screen, print" href="/css/miscellaneous/lightgallery/lightgallery.bundle.css">
+<link rel="stylesheet" media="screen, print" href="/css/page-invoice.css">
+<link rel="stylesheet" media="screen, print" href="/css/theme-demo.css">
 <!-- BEGIN Body -->
 <!-- Possible Classes
 
