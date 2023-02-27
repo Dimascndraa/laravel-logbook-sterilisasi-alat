@@ -2,38 +2,12 @@
 @section('title','Dashboard')
 @section('content')
 	<main id="js-page-content" role="main" class="page-content">
-        
         @include('inc.breadcrumb',['bcrumb' => 'bc_level_satu','bc_1'=>'Application Intel'])
-		
         <div class="subheader">
-			<h1 class="subheader-title">
-				<i class='fal fa-home'></i> @yield('title','My App')
-				<small>
-					Your first page for content division
-				</small>
-			</h1>
-			<div class="subheader-block d-lg-flex align-items-center">
-				<div class="d-inline-flex flex-column justify-content-center mr-3">
-					<span class="fw-300 fs-xs d-block opacity-50">
-						<small>EXPENSES</small>
-					</span>
-					<span class="fw-500 fs-xl d-block color-primary-500">
-						$47,000
-					</span>
-				</div>
-				<span class="sparklines hidden-lg-down" sparkType="bar" sparkBarColor="#886ab5" sparkHeight="32px" sparkBarWidth="5px" values="3,4,3,6,7,3,3,6,2,6,4"></span>
-			</div>
-			<div class="subheader-block d-lg-flex align-items-center border-faded border-right-0 border-top-0 border-bottom-0 ml-3 pl-3">
-				<div class="d-inline-flex flex-column justify-content-center mr-3">
-					<span class="fw-300 fs-xs d-block opacity-50">
-						<small>MY PROFITS</small>
-					</span>
-					<span class="fw-500 fs-xl d-block color-danger-500">
-						$38,500
-					</span>
-				</div>
-				<span class="sparklines hidden-lg-down" sparkType="bar" sparkBarColor="#fe6bb0" sparkHeight="32px" sparkBarWidth="5px" values="1,4,3,6,5,3,9,6,5,9,7"></span>
-			</div>
+            @component('inc.subheader',['subheader_title'=>'st_type_2'])
+                @slot('sh_icon') home @endslot
+                @slot('sh_descipt') Your first page for content division @endslot
+            @endcomponent
 		</div>
         <div class="fs-lg fw-300 p-5 bg-white border-faded rounded mb-g">
 			<h3 class="mb-g">

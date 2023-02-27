@@ -1,15 +1,12 @@
 @extends('inc.layout')
-@section('title','Introduction')
+@section('title','Latest Build Notes')
 @section('content')
 	<main id="js-page-content" role="main" class="page-content">
 		@include('inc.breadcrumb',['bcrumb' => 'bc_level_dua','bc_1'=>'Application Intel'])
 		<div class="subheader">
-			<h1 class="subheader-title">
-				Latest Build Notes
-				<small>
-					Casing all release notes for your convenience
-				</small>
-			</h1>
+			@component('inc.subheader',['subheader_title'=>'st_type_3'])
+				@slot('sh_descipt') Casing all release notes for your convenience @endslot
+			@endcomponent
 		</div>
 		<div class="card mb-g">
 			<div class="card-body">

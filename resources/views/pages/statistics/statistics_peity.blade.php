@@ -4,12 +4,11 @@
     <main id="js-page-content" role="main" class="page-content">
         @include('inc.breadcrumb',['bcrumb' => 'bc_level_dua','bc_1'=>'Statistics'])
         <div class="subheader">
-            <h1 class="subheader-title">
-                <i class='subheader-icon fal fa-chart-pie'></i> Peity <sup class='badge badge-primary fw-500'>ADDON</sup>
-                <small>
-                    Simple and lightweight miniature chart.
-                </small>
-            </h1>
+            @component('inc.subheader',['subheader_title'=>'st_type_5'])
+            @slot('sh_icon') chart-pie @endslot
+            @slot('sh_titile_main') Peity <sup class='badge badge-primary fw-500'>ADDON</sup> @endslot
+            @slot('sh_descipt') Simple and lightweight miniature chart. @endslot
+                           
             <div class="subheader-block d-none d-sm-flex align-items-center">
                 <div class="d-inline-flex flex-column justify-content-center mr-3">
                     <span class="fw-300 fs-xs d-block opacity-50">
@@ -32,6 +31,7 @@
                 </div>
                 <span class="peity-line" data-peity='{ "fill": "#fe6bb0", "stroke": "#fd3995", "height": 32, "width": 100 }'>1,4,3,6,5,3,9,6,5,9,7</span>
             </div>
+            @endcomponent 
         </div>
         <div class="alert alert-primary">
             <div class="d-flex flex-start w-100">

@@ -1,15 +1,13 @@
 @extends('inc.layout')
-@section('title','UI Tooltips')
+@section('title','Tooltips')
 @section('content')
 	<main id="js-page-content" role="main" class="page-content">
 		@include('inc.breadcrumb',['bcrumb' => 'bc_level_dua','bc_1'=>'UI Components'])
 		<div class="subheader">
-			<h1 class="subheader-title">
-				<i class='subheader-icon fal fa-window'></i> Tooltips
-				<small>
-					Examples for showing pagination to indicate a series of related content exists across multiple pages.
-				</small>
-			</h1>
+			@component('inc.subheader',['subheader_title'=>'st_type_2'])
+			@slot('sh_icon') window @endslot
+			@slot('sh_descipt') Examples for showing pagination to indicate a series of related content exists across multiple pages. @endslot
+			@endcomponent
 		</div>
 		<div class="row">
 			<div class="col-xl-6">

@@ -1,15 +1,13 @@
 @extends('inc.layout')
-@section('title','UI Dropdowns')
+@section('title','Dropdowns')
 @section('content')
 	<main id="js-page-content" role="main" class="page-content">
 		@include('inc.breadcrumb',['bcrumb' => 'bc_level_dua','bc_1'=>'UI Components'])
 		<div class="subheader">
-			<h1 class="subheader-title">
-				<i class='subheader-icon fal fa-window'></i> Dropdowns
-				<small>
-					Toggle contextual overlays for displaying lists of links and more with the Bootstrap dropdown plugin.
-				</small>
-			</h1>
+			@component('inc.subheader',['subheader_title'=>'st_type_2'])
+			@slot('sh_icon') window @endslot
+			@slot('sh_descipt') Toggle contextual overlays for displaying lists of links and more with the Bootstrap dropdown plugin. @endslot
+			@endcomponent
 		</div>
 		<div class="alert alert-primary">
 			<div class="d-flex flex-start w-100">

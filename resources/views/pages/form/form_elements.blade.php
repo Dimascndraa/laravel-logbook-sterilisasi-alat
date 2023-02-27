@@ -1,15 +1,14 @@
 @extends('inc.layout')
-@section('title','Element')
+@section('title','Elements')
 @section('content')
     <main id="js-page-content" role="main" class="page-content">
         @include('inc.breadcrumb',['bcrumb' => 'bc_level_dua','bc_1'=>'Form Stuff'])
         <div class="subheader">
-            <h1 class="subheader-title">
-                Form Elements
-                <small>
-                    Default elements for forms
-                </small>
-            </h1>
+            @component('inc.subheader',['subheader_title'=>'st_type_4'])
+            @slot('sh_titile_main') Form @endslot
+            @slot('sh_titile_sub') Elements @endslot
+            @slot('sh_descipt') Default elements for forms @endslot
+            @endcomponent
         </div>
         <div class="alert alert-primary">
             <div class="d-table w-100">

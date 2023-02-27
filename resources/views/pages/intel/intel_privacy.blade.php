@@ -4,12 +4,10 @@
 	<main id="js-page-content" role="main" class="page-content">
 		@include('inc.breadcrumb',['bcrumb' => 'bc_level_dua','bc_1'=>'Application Intel'])
 		<div class="subheader">
-			<h1 class="subheader-title">
-				<i class='fal fa-info-circle'></i> Privacy
-				<small>
-					SmartAdmin Privacy
-				</small>
-			</h1>
+			@component('inc.subheader',['subheader_title'=>'st_type_2'])
+				@slot('sh_icon') info-circle @endslot
+				@slot('sh_descipt') SmartAdmin Privacy @endslot
+			@endcomponent
 		</div>
 		<div class="fs-lg fw-300 p-5 bg-white border-faded rounded mb-g">
 			<h2>Privacy</h2>

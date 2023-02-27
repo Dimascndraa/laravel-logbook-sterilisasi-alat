@@ -390,24 +390,24 @@ Route::get('/page_contacts', function () {
 
 // Forum
 Route::get('/page_forum_list', function () {
-    return view('pages.page.page_forum_list');
+    return view('pages.page.forum.page_forum_list');
 });
 Route::get('/page_forum_threads', function () {
-    return view('pages.page.page_forum_threads');
+    return view('pages.page.forum.page_forum_threads');
 });
 Route::get('/page_forum_discussion', function () {
-    return view('pages.page.page_forum_discussion');
+    return view('pages.page.forum.page_forum_discussion');
 });
 
 //pages inbox
 Route::get('/page_inbox_general', function () {
-    return view('pages.page.page_inbox_general');
+    return view('pages.page.inbox.page_inbox_general');
 });
 Route::get('/page_inbox_read', function () {
-    return view('pages.page.page_inbox_read');
+    return view('pages.page.inbox.page_inbox_read');
 });
 Route::get('/page_inbox_write', function () {
-    return view('pages.page.page_inbox_write');
+    return view('pages.page.inbox.page_inbox_write');
 });
 
 //Invoice (printable)
@@ -417,33 +417,33 @@ Route::get('/page_invoice', function () {
 
 //Authentication
 Route::get('/page_forget', function () {
-    return view('pages.page.page_forget');
+    return view('pages.page.autent.page_forget');
 });
 Route::get('/page_locked', function () {
-    return view('pages.page.page_locked');
+    return view('pages.page.autent.page_locked');
 });
 Route::get('/page_login', function () {
-    return view('pages.page.page_login');
+    return view('pages.page.autent.page_login');
 });
-Route::get('/page_login-alt', function () {
-    return view('pages.page.page_login-alt');
+Route::get('/page_login_alt', function () {
+    return view('pages.page.autent.page_login_alt');
 });
 Route::get('/page_register', function () {
-    return view('pages.page.page_register');
+    return view('pages.page.autent.page_register');
 });
 Route::get('/page_confirmation', function () {
-    return view('pages.page.page_confirmation');
+    return view('pages.page.autent.page_confirmation');
 });
 
 //Error Pages
 Route::get('/page_error', function () {
-    return view('pages.page.page_error');
+    return view('pages.page.error.page_error');
 });
 Route::get('/page_error_404', function () {
-    return view('pages.page.page_error_404');
+    return view('pages.page.error.page_error_404');
 });
 Route::get('/page_error_announced', function () {
-    return view('pages.page.page_error_announced');
+    return view('pages.page.error.page_error_announced');
 });
 
 //Profile

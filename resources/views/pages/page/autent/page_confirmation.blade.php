@@ -45,12 +45,12 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                             <span class="text-white opacity-50 ml-auto mr-2 hidden-sm-down">
                                 Already a member?
                             </span>
-                            <a href="/page_login-alt" class="btn-link text-white ml-auto ml-sm-0">
+                            <a href="/page_login_alt" class="btn-link text-white ml-auto ml-sm-0">
                                 Secure Login
                             </a>
                         </div>
                     </div>
-                    <div class="flex-1" style="background: url(img/svg/pattern-1.svg) no-repeat center bottom fixed; background-size: cover;">
+                    <div class="flex-1" style="background: url(/img/svg/pattern-1.svg) no-repeat center bottom fixed; background-size: cover;">
                         <div class="container py-4 py-lg-5 my-lg-5 px-4 px-sm-0">
                             <div class="row">
                                 <div class="col-xl-12">

@@ -4,12 +4,11 @@
 	<main id="js-page-content" role="main" class="page-content">
 		@include('inc.breadcrumb',['bcrumb' => 'bc_level_dua','bc_1'=>'Utilities'])
 		<div class="subheader">
-			<h1 class="subheader-title">
-				Fonts: <span class='fw-300'>Roboto <sup class='fw-400 fs-sm'>(by google)</sup></span>
-				<small>
-					Typography description
-				</small>
-			</h1>
+			@component('inc.subheader',['subheader_title'=>'st_type_4'])
+			@slot('sh_titile_main') Fonts: @endslot
+			@slot('sh_titile_sub') <span class='fw-300'>Roboto <sup class='fw-400 fs-sm'>(by google)</sup></span> @endslot
+			@slot('sh_descipt') Typography description @endslot
+			@endcomponent
 		</div>
 		<div class="container">
 			<div class="card p-4">

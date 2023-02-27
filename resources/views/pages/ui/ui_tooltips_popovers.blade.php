@@ -1,14 +1,12 @@
 @extends('inc.layout')
-@section('title','UI Tabs & Pills')
+@section('title','Tabs & Pills')
 @section('content')
 @include('inc.breadcrumb',['bcrumb' => 'bc_level_dua','bc_1'=>'UI Components'])
 		<div class="subheader">
-			<h1 class="subheader-title">
-				<i class='subheader-icon fal fa-window'></i> Tooltips & Popovers
-				<small>
-					tooltips-and-popovers description
-				</small>
-			</h1>
+			@component('inc.subheader',['subheader_title'=>'st_type_2'])
+			@slot('sh_icon') window @endslot
+			@slot('sh_descipt') tooltips-and-popovers description @endslot
+			@endcomponent
 		</div>
 		tooltips-and-popovers
 	</main>

@@ -4,12 +4,9 @@
 	<main id="js-page-content" role="main" class="page-content">
 		@include('inc.breadcrumb',['bcrumb' => 'bc_level_dua','bc_1'=>'Utilities'])
 		<div class="subheader">
-			<h1 class="subheader-title">
-				Color Pallet
-				<small>
-					Comes with 60 unique color pallets, that uses one prime to generate all pallets
-				</small>
-			</h1>
+			@component('inc.subheader',['subheader_title'=>'st_type_3'])
+			@slot('sh_descipt') Comes with 60 unique color pallets, that uses one prime to generate all pallets @endslot
+			@endcomponent
 		</div>
 		<div class="row">
 			<div class="col-xl-12">

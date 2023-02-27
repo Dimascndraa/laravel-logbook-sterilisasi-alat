@@ -4,15 +4,14 @@
 	<main id="js-page-content" role="main" class="page-content">
 		@include('inc.breadcrumb',['bcrumb' => 'bc_level_tiga','bc_1'=>'category_1','bc_2'=>'category_2','title'=>'Page Titile'])
 		<div class="subheader">
-			<h1 class="subheader-title">
-				<i class='subheader-icon fal fa-'></i> Page <span class='fw-300'>Title</span> <sup class='badge badge-primary fw-500'>ADDON</sup>
-				<small>
-					blank description
-				</small>
-			</h1>
+			@component('inc.subheader',['subheader_title'=>'st_type_5'])
+			@slot('sh_icon') icon @endslot
+			@slot('sh_titile_main') Page <span class='fw-300'>Title</span> <sup class='badge badge-primary fw-500'>ADDON</sup> @endslot
+			@slot('sh_descipt') blank description @endslot
 			<div class="subheader-block">
 				Right content of header
 			</div>
+			@endcomponent
 		</div>
 		<div class="alert alert-primary">
 			<div class="d-flex flex-start w-100">

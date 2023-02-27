@@ -4,12 +4,11 @@
 	<main id="js-page-content" role="main" class="page-content">
 		@include('inc.breadcrumb',['bcrumb' => 'bc_level_tiga','bc_1'=>'Font Icons','bc_2'=>'FontAwesome 5 Pro'])
 		<div class="subheader">
-			<h1 class="subheader-title">
-				Font Awesome 5: <span class='fw-700'>Solid</span>
-				<small>
-					Font Awesome 5 Pro Solid
-				</small>
-			</h1>
+			@component('inc.subheader',['subheader_title'=>'st_type_4'])
+			@slot('sh_titile_main') Font Awesome 5: @endslot
+			@slot('sh_titile_sub') <span class='fw-300'>Solid</span> @endslot
+			@slot('sh_descipt') Font Awesome 5 Pro Solid @endslot
+			@endcomponent				
 		</div>
 		<!-- input group search box -->
 		<div class="input-group input-group-lg mb-3">

@@ -4,12 +4,11 @@
     <main id="js-page-content" role="main" class="page-content">
         @include('inc.breadcrumb',['bcrumb' => 'bc_level_dua','bc_1'=>'Form Plugins'])
         <div class="subheader">
-            <h1 class="subheader-title">
-                <i class='subheader-icon fal fa-credit-card-front'></i> Ion.RangeSlider<sup class='badge badge-primary fw-500'>ADDON</sup>
-                <small>
-                    Easy to use, flexible and responsive range slider with skin support
-                </small>
-            </h1>
+            @component('inc.subheader',['subheader_title'=>'st_type_5'])
+            @slot('sh_icon') credit-card-front @endslot
+            @slot('sh_titile_main') Ion.RangeSlider<sup class='badge badge-primary fw-500'>ADDON</sup> @endslot
+            @slot('sh_descipt') Easy to use, flexible and responsive range slider with skin support @endslot
+            @endcomponent
         </div>
         <div class="alert alert-primary">
             <div class="d-flex flex-start w-100">

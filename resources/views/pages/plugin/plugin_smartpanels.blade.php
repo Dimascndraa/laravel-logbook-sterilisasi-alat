@@ -4,12 +4,11 @@
                     <main id="js-page-content" role="main" class="page-content">
                         @include('inc.breadcrumb',['bcrumb' => 'bc_level_dua','bc_1'=>'Core Plugins'])
                         <div class="subheader">
-                            <h1 class="subheader-title">
-                                <i class='subheader-icon fal fa-shield-alt'></i> SmartPanels <sup class='badge badge-success fw-500'>EXTENSION</sup>
-                                <small>
-                                    Panels can be used in almost any situation, helping wrap everything in a slick & lightweight container
-                                </small>
-                            </h1>
+                            @component('inc.subheader',['subheader_title'=>'st_type_5'])
+                            @slot('sh_icon') shield-alt @endslot
+                            @slot('sh_titile_main') SmartPanels <sup class='badge badge-success fw-500'>EXTENSION</sup> @endslot
+                            @slot('sh_descipt') Panels can be used in almost any situation, helping wrap everything in a slick & lightweight container @endslot
+                            @endcomponent
                         </div>
                         <div class="alert alert-primary alert-dismissible">
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">

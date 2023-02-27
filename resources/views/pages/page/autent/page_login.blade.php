@@ -65,7 +65,7 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                 </form>
             </div>
             <div class="blankpage-footer text-center">
-                <a href="#"><strong>Recover Password</strong></a> | <a href="#"><strong>Register Account</strong></a>
+                <a href="/page_forget"><strong>Recover Password</strong></a> | <a href="/page_register"><strong>Register Account</strong></a>
             </div>
         </div>
         <div class="login-footer p-2">
@@ -75,9 +75,9 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                 </div>
             </div>
         </div>
-        <video poster="img/backgrounds/clouds.png" id="bgvid" playsinline autoplay muted loop>
-            <source src="media/video/cc.webm" type="video/webm">
-            <source src="media/video/cc.mp4" type="video/mp4">
+        <video poster="/img/backgrounds/clouds.png" id="bgvid" playsinline autoplay muted loop>
+            <source src="/media/video/cc.webm" type="video/webm">
+            <source src="/media/video/cc.mp4" type="video/mp4">
         </video>
         <!-- base vendor bundle:
 			 DOC: if you remove pace.js from core please note on Internet Explorer some CSS animations may execute before a page is fully loaded, resulting 'jump' animations

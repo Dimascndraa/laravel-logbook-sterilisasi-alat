@@ -4,12 +4,9 @@
 	<main id="js-page-content" role="main" class="page-content">
 		@include('inc.breadcrumb',['bcrumb' => 'bc_level_dua','bc_1'=>'Utilities'])
 		<div class="subheader">
-			<h1 class="subheader-title">
-				Typography
-				<small>
-					Documentation and examples for typography, including global settings, headings, body text, lists, and more.
-				</small>
-			</h1>
+			@component('inc.subheader',['subheader_title'=>'st_type_3'])
+			@slot('sh_descipt') Documentation and examples for typography, including global settings, headings, body text, lists, and more. @endslot
+			@endcomponent
 		</div>
 		<div class="row">
 			<div class="col-lg-12 col-xl-6">

@@ -4,12 +4,9 @@
 	<main id="js-page-content" role="main" class="page-content">
 		@include('inc.breadcrumb',['bcrumb' => 'bc_level_dua','bc_1'=>'Utilities'])
 		<div class="subheader">
-			<h1 class="subheader-title">
-				Responsive Grid
-				<small>
-					Bootstrap includes a powerful mobile-first flexbox grid system for building layouts of all shapes and sizes.
-				</small>
-			</h1>
+			@component('inc.subheader',['subheader_title'=>'st_type_3'])
+			@slot('sh_descipt') Bootstrap includes a powerful mobile-first flexbox grid system for building layouts of all shapes and sizes. @endslot
+			@endcomponent
 		</div>
 		<div class="alert alert-primary alert-dismissible">
 			<button type="button" class="close" data-dismiss="alert" aria-label="Close">

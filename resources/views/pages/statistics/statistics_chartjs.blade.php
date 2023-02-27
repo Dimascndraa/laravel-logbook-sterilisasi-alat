@@ -4,12 +4,11 @@
     <main id="js-page-content" role="main" class="page-content">
         @include('inc.breadcrumb',['bcrumb' => 'bc_level_dua','bc_1'=>'Statistics'])
         <div class="subheader">
-            <h1 class="subheader-title">
-                <i class='subheader-icon fal fa-chart-pie'></i> Chart.js <sup class='badge badge-primary fw-500'>ADDON</sup>
-                <small>
-                    Simple yet flexible JavaScript charting for designers & developers
-                </small>
-            </h1>
+            @component('inc.subheader',['subheader_title'=>'st_type_5'])
+            @slot('sh_icon') chart-pie @endslot
+            @slot('sh_titile_main') Chart.js <sup class='badge badge-primary fw-500'>ADDON</sup> @endslot
+            @slot('sh_descipt') Simple yet flexible JavaScript charting for designers & developers @endslot
+            @endcomponent            
         </div>
         <div class="alert alert-primary">
             <div class="d-flex flex-start w-100">

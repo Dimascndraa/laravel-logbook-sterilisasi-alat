@@ -4,12 +4,10 @@
 	<main id="js-page-content" role="main" class="page-content">
 		@include('inc.breadcrumb',['bcrumb' => 'bc_level_dua','bc_1'=>'Utilities'])
 		<div class="subheader">
-			<h1 class="subheader-title">
-				<i class='subheader-icon fal fa-bolt'></i> Helpers
-				<small>
-					helpers description
-				</small>
-			</h1>
+			@component('inc.subheader',['subheader_title'=>'st_type_2'])
+			@slot('sh_icon') bolt @endslot
+			@slot('sh_descipt') helpers description @endslot
+			@endcomponent
 		</div>
 		<div class="input-group input-group-lg mb-3">
 			<input type="text" class="form-control shadow-inset-2" id="helper-filter-input" aria-label="type 2 or more letters" placeholder="Search for helpers">

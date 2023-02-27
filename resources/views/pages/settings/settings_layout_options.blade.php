@@ -4,12 +4,13 @@
 	<main id="js-page-content" role="main" class="page-content">
 		@include('inc.breadcrumb',['bcrumb' => 'bc_level_dua','bc_1'=>'Theme Settings'])
 		<div class="subheader">
-			<h1 class="subheader-title">
-				Theme Settings: <span class='fw-300'>Layout Options</span>
-				<small>
+            @component('inc.subheader',['subheader_title'=>'st_type_4'])
+                @slot('sh_titile_main') Theme Settings: @endslot
+                @slot('sh_titile_sub') Layout Options @endslot
+				@slot('sh_descipt') 
 					Over 36 layout possibilities and over <span class='fw-500 color-info-700'>285 combinations</span>
-				</small>
-			</h1>
+				@endslot
+			@endcomponent
 		</div>
 		<div class="alert alert-primary alert-dismissible">
 			<button type="button" class="close" data-dismiss="alert" aria-label="Close">

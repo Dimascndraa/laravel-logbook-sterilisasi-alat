@@ -1,15 +1,13 @@
 @extends('inc.layout')
-@section('title','UI Scrollspy')
+@section('title','Scrollspy')
 @section('content')
 	<main id="js-page-content" role="main" class="page-content">
 		@include('inc.breadcrumb',['bcrumb' => 'bc_level_dua','bc_1'=>'UI Components'])
 		<div class="subheader">
-			<h1 class="subheader-title">
-				<i class='subheader-icon fal fa-window'></i> Scrollspy
-				<small>
-					Automatically update Bootstrap navigation or list group components based on scroll position to indicate which link is currently active in the viewport.
-				</small>
-			</h1>
+			@component('inc.subheader',['subheader_title'=>'st_type_2'])
+			@slot('sh_icon') window @endslot
+			@slot('sh_descipt') Automatically update Bootstrap navigation or list group components based on scroll position to indicate which link is currently active in the viewport. @endslot
+			@endcomponent
 		</div>
 		<div class="row">
 			<div class="col-xl-6">

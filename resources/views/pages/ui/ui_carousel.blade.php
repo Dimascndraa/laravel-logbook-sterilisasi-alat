@@ -1,15 +1,13 @@
 @extends('inc.layout')
-@section('title','UI Carousel')
+@section('title','Carousel')
 @section('content')
 	<main id="js-page-content" role="main" class="page-content">
 		@include('inc.breadcrumb',['bcrumb' => 'bc_level_dua','bc_1'=>'UI Components'])
 		<div class="subheader">
-			<h1 class="subheader-title">
-				<i class='subheader-icon fal fa-window'></i> Carousel
-				<small>
-					A slideshow component for cycling through elements—images or slides of text—like a carousel.
-				</small>
-			</h1>
+			@component('inc.subheader',['subheader_title'=>'st_type_2'])
+			@slot('sh_icon') window @endslot
+			@slot('sh_descipt') A slideshow component for cycling through elements—images or slides of text—like a carousel. @endslot
+			@endcomponent
 		</div>
 		<div class="row">
 			<div class="col-sm-12">

@@ -1,15 +1,13 @@
 @extends('inc.layout')
-@section('title','UI Alert')
+@section('title','Alert')
 @section('content')
 	<main id="js-page-content" role="main" class="page-content">
 		@include('inc.breadcrumb',['bcrumb' => 'bc_level_dua','bc_1'=>'UI Components'])
 		<div class="subheader">
-			<h1 class="subheader-title">
-				<i class='subheader-icon fal fa-window'></i> Alerts
-				<small>
-					Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.
-				</small>
-			</h1>
+			@component('inc.subheader',['subheader_title'=>'st_type_2'])
+			@slot('sh_icon') window @endslot
+			@slot('sh_descipt') Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages. @endslot
+			@endcomponent
 		</div>
 		<div class="row">
 			<div class="col-md-12 col-xl-6">

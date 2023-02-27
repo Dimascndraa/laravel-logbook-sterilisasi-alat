@@ -28,7 +28,6 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
         <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
         <link rel="mask-icon" href="/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
         <!-- Optional: page related CSS-->
-        <link rel="stylesheet" media="screen, print" href="/css/fa-brands.css">
     </head>
     <body>
         <div class="page-wrapper">
@@ -42,39 +41,46 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                                     <span class="page-logo-text mr-1">SmartAdmin WebApp</span>
                                 </a>
                             </div>
-                            <a href="/page_register" class="btn-link text-white ml-auto">
-                                Create Account
+                            <span class="text-white opacity-50 ml-auto mr-2 hidden-sm-down">
+                                Already a member?
+                            </span>
+                            <a href="/page_login_alt" class="btn-link text-white ml-auto ml-sm-0">
+                                Secure Login
                             </a>
                         </div>
                     </div>
-                    <div class="d-flex flex-1" style="background: url(img/svg/pattern-1.svg) no-repeat center bottom fixed; background-size: cover;">
-                        <div class="container py-4 py-lg-5 my-lg-5 px-4 px-sm-0 text-white d-flex align-items-center justify-content-center">
-                            <form id="js-login" action="/intel_analytics_dashboard" role="form" class="text-center text-white mb-5 pb-5">
-                                <div class="py-3">
-                                    <img src="/img/demo/avatars/avatar-admin-lg.png" class="img-responsive rounded-circle img-thumbnail" alt="thumbnail">
-                                </div>
-                                <div class="form-group">
-                                    <h3>
-                                        Dr. Codex Lantern
-                                        <small>
-                                            drlantern@gotbootstrap.com
+                    <div class="flex-1" style="background: url(/img/svg/pattern-1.svg) no-repeat center bottom fixed; background-size: cover;">
+                        <div class="container py-4 py-lg-5 my-lg-5 px-4 px-sm-0">
+                            <div class="row">
+                                <div class="col-xl-12">
+                                    <h2 class="fs-xxl fw-500 mt-4 text-white text-center">
+                                        "My dog ate my password"
+                                        <small class="h3 fw-300 mt-3 mb-5 text-white opacity-60 hidden-sm-down">
+                                            Not a problem, happens to the best of us. Just use the form below to reset it!
                                         </small>
-                                    </h3>
-                                    <p class="text-white opacity-50">Enter password to unlock screen</p>
-                                    <div class="input-group input-group-lg">
-                                        <input type="text" class="form-control" placeholder="Password">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-success shadow-0" type="button" id="button-addon5"><i class="fal fa-key"></i></button>
-                                        </div>
+                                    </h2>
+                                </div>
+                                <div class="col-xl-6 ml-auto mr-auto">
+                                    <div class="card p-4 rounded-plus bg-faded">
+                                        <form id="js-login" novalidate="" action="/intel_analytics_dashboard">
+                                            <div class="form-group">
+                                                <label class="form-label" for="lostaccount">Your username or email</label>
+                                                <input type="email" id="lostaccount" class="form-control" placeholder="Recovery email" required>
+                                                <div class="invalid-feedback">No, you missed this one.</div>
+                                                <div class="help-block">We will email you the instructions</div>
+                                            </div>
+                                            <div class="row no-gutters">
+                                                <div class="col-md-4 ml-auto text-right">
+                                                    <button id="js-login-btn" type="submit" class="btn btn-danger">Recover</button>
+                                                </div>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
-                                <div class="text-center">
-                                    <a href="/page_login-alt" class="text-white opacity-90">Not Dr. Codex Lantern ?</a>
-                                </div>
-                            </form>
-                            <div class="position-absolute pos-bottom pos-left pos-right p-3 text-center text-white">
-                                2019 © SmartAdmin by&nbsp;<a href='https://www.gotbootstrap.com' class='text-white opacity-40 fw-500' title='gotbootstrap.com' target='_blank'>gotbootstrap.com</a>
                             </div>
+                        </div>
+                        <div class="d-block text-center text-white">
+                            2019 © SmartAdmin by&nbsp;<a href='https://www.gotbootstrap.com' class='text-white opacity-40 fw-500' title='gotbootstrap.com' target='_blank'>gotbootstrap.com</a>
                         </div>
                     </div>
                 </div>

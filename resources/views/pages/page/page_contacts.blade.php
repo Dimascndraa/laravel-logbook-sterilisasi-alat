@@ -4,12 +4,10 @@
     <main id="js-page-content" role="main" class="page-content">
         @include('inc.breadcrumb',['bcrumb' => 'bc_level_dua','bc_1'=>'Page View'])
         <div class="subheader">
-            <h1 class="subheader-title">
-                <i class='subheader-icon fal fa-plus-circle'></i> Contacts
-                <small>
-                    A simple contact page
-                </small>
-            </h1>
+            @component('inc.subheader',['subheader_title'=>'st_type_2'])
+            @slot('sh_icon') plus-circle @endslot
+            @slot('sh_descipt') A simple contact page @endslot
+            @endcomponent
         </div>
         <div class="row">
             <div class="col-xl-12">

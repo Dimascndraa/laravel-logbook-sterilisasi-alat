@@ -4,12 +4,10 @@
     <main id="js-page-content" role="main" class="page-content">
         @include('inc.breadcrumb',['bcrumb' => 'bc_level_dua','bc_1'=>'Page View'])
         <div class="subheader">
-            <h1 class="subheader-title">
-                <i class='subheader-icon fal fa-plus-circle'></i> Chat
-                <small>
-                    A robust and simple chat component that is flexible, intuitive, easy to use and customize
-                </small>
-            </h1>
+            @component('inc.subheader',['subheader_title'=>'st_type_2'])
+            @slot('sh_icon') plus-circle @endslot
+            @slot('sh_descipt') A robust and simple chat component that is flexible, intuitive, easy to use and customize @endslot
+            @endcomponent
         </div>
         <div class="d-flex flex-grow-1 p-0 border-faded shadow-4" style="max-height:800px;">
             <!-- left slider -->

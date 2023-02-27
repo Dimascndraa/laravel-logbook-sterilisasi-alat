@@ -4,12 +4,11 @@
     <main id="js-page-content" role="main" class="page-content">
         @include('inc.breadcrumb',['bcrumb' => 'bc_level_dua','bc_1'=>'Statistics'])
         <div class="subheader">
-            <h1 class="subheader-title">
-                <i class='subheader-icon fal fa-chart-pie'></i> Easy Pie Chart <sup class='badge badge-primary fw-500'>ADDON</sup>
-                <small>
-                    Lightweight plugin to render simple, animated and retina optimized pie charts.
-                </small>
-            </h1>
+            @component('inc.subheader',['subheader_title'=>'st_type_5'])
+            @slot('sh_icon') chart-pie @endslot
+            @slot('sh_titile_main') Easy Pie Chart <sup class='badge badge-primary fw-500'>ADDON</sup> @endslot
+            @slot('sh_descipt') Lightweight plugin to render simple, animated and retina optimized pie charts. @endslot
+             
             <div class="subheader-block d-none d-sm-flex align-items-center">
                 <div class="d-inline-flex flex-column justify-content-center mr-3">
                     <span class="fw-300 fs-xs d-block opacity-50">
@@ -36,6 +35,7 @@
                     <span class="js-percent d-flex align-items-center justify-content-center position-absolute pos-left pos-right pos-top pos-bottom"></span>
                 </span>
             </div>
+            @endcomponent   
         </div>
         <div class="alert alert-primary">
             <div class="d-flex flex-start w-100">

@@ -7,12 +7,11 @@
     <main id="js-page-content" role="main" class="page-content">
         @include('inc.breadcrumb',['bcrumb' => 'bc_level_tiga','bc_1'=>'Page View','bc_2'=>'Forum Layouts'])
         <div class="subheader">
-            <h1 class="subheader-title">
-                <i class='subheader-icon fal fa-plus-circle'></i> Forum: <span class='fw-300'>Discussion</span>
-                <small>
-                    Forum discussion page
-                </small>
-            </h1>
+            @component('inc.subheader',['subheader_title'=>'st_type_5'])
+            @slot('sh_icon') plus-circle @endslot
+            @slot('sh_titile_main') Forum: <span class='fw-300'>Discussion</span> @endslot
+            @slot('sh_descipt') Forum discussion page @endslot
+            @endcomponent
         </div>
         <div class="row">
             <div class="col-xl-12">

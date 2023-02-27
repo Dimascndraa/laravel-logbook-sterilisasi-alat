@@ -4,12 +4,12 @@
     <main id="js-page-content" role="main" class="page-content">
         @include('inc.breadcrumb',['bcrumb' => 'bc_level_dua','bc_1'=>'Datatables'])
         <div class="subheader">
-            <h1 class="subheader-title">
-                <i class='subheader-icon fal fa-table'></i> DataTables: <span class='fw-300'>KeyTable</span> <sup class='badge badge-primary fw-500'>ADDON</sup>
-                <small>
-                    Create headache free searching, sorting and pagination tables without any complex configuration
-                </small>
-            </h1>
+            @component('inc.subheader',['subheader_title'=>'st_type_5'])
+            @slot('sh_icon') table @endslot
+            @slot('sh_titile_main') DataTables: <span class='fw-300'>KeyTable</span> <sup class='badge badge-primary fw-500'>ADDON</sup> @endslot
+            @slot('sh_descipt') Create headache free searching, sorting and pagination tables without any complex configuration @endslot
+            @endcomponent
+
         </div>
         <div class="row">
             <div class="col-xl-12">

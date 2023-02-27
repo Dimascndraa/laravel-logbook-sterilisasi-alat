@@ -1,15 +1,13 @@
 @extends('inc.layout')
-@section('title','UI List filter')
+@section('title','List filter')
 @section('content')
 	<main id="js-page-content" role="main" class="page-content">
 		@include('inc.breadcrumb',['bcrumb' => 'bc_level_dua','bc_1'=>'UI Components'])
 		<div class="subheader">
-			<h1 class="subheader-title">
-				<i class='subheader-icon fal fa-window'></i> List filter
-				<small>
-					Allow any lists to be filtered via the included filter plugin. Very easy to setup, no programming needed!
-				</small>
-			</h1>
+			@component('inc.subheader',['subheader_title'=>'st_type_2'])
+			@slot('sh_icon') window @endslot
+			@slot('sh_descipt') Allow any lists to be filtered via the included filter plugin. Very easy to setup, no programming needed! @endslot
+			@endcomponent
 		</div>
 		<div class="row">
 			<div class="col-xl-6">

@@ -4,12 +4,11 @@
                     <main id="js-page-content" role="main" class="page-content">
                         @include('inc.breadcrumb',['bcrumb' => 'bc_level_dua','bc_1'=>'Core Plugins'])
                         <div class="subheader">
-                            <h1 class="subheader-title">
-                                <i class='subheader-icon fal fa-shield-alt'></i> SlimScroll <sup class='badge badge-success fw-500'>EXTENSION</sup>
-                                <small>
-                                    slimScroll is a small (2.8KB) jQuery plugin that transforms any div into a scrollable area with a nice scrollbar - similar to the one Facebook and Google started using.
-                                </small>
-                            </h1>
+                            @component('inc.subheader',['subheader_title'=>'st_type_5'])
+                            @slot('sh_icon') shield-alt @endslot
+                            @slot('sh_titile_main') SlimScroll <sup class='badge badge-success fw-500'>EXTENSION</sup> @endslot
+                            @slot('sh_descipt') slimScroll is a small (2.8KB) jQuery plugin that transforms any div into a scrollable area with a nice scrollbar - similar to the one Facebook and Google started using. @endslot
+                            @endcomponent
                         </div>
                         <div class="alert alert-primary">
                             <div class="d-flex flex-start w-100">

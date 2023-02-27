@@ -4,12 +4,11 @@
                     <main id="js-page-content" role="main" class="page-content">
                         @include('inc.breadcrumb',['bcrumb' => 'bc_level_dua','bc_1'=>'Core Plugins'])
                         <div class="subheader">
-                            <h1 class="subheader-title">
-                                <i class='subheader-icon fal fa-shield-alt'></i> i18Next <sup class='badge badge-success fw-500'>EXTENSION</sup>
-                                <small>
-                                    i18next is a full-featured i18n javascript library for translating your webapplication.
-                                </small>
-                            </h1>
+                            @component('inc.subheader',['subheader_title'=>'st_type_5'])
+                            @slot('sh_icon') shield-alt @endslot
+                            @slot('sh_titile_main') i18Next <sup class='badge badge-success fw-500'>EXTENSION</sup> @endslot
+                            @slot('sh_descipt') i18next is a full-featured i18n javascript library for translating your webapplication. @endslot
+                            @endcomponent
                         </div>
                         <div class="alert alert-primary">
                             <div class="d-flex flex-start w-100">

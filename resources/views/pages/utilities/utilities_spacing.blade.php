@@ -4,12 +4,10 @@
 	<main id="js-page-content" role="main" class="page-content">
 		@include('inc.breadcrumb',['bcrumb' => 'bc_level_dua','bc_1'=>'Utilities'])
 		<div class="subheader">
-			<h1 class="subheader-title">
-				<i class='subheader-icon fal fa-bolt'></i> Spacing
-				<small>
-					Bootstrap includes a wide range of shorthand responsive margin and padding utility classes to modify an element’s appearance.
-				</small>
-			</h1>
+			@component('inc.subheader',['subheader_title'=>'st_type_2'])
+			@slot('sh_icon') bolt @endslot
+			@slot('sh_descipt') Bootstrap includes a wide range of shorthand responsive margin and padding utility classes to modify an element’s appearance. @endslot
+			@endcomponent
 		</div>
 		<div class="alert alert-primary">
 			<div class="d-flex flex-start w-100">

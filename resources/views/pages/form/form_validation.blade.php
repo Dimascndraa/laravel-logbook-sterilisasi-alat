@@ -4,12 +4,10 @@
     <main id="js-page-content" role="main" class="page-content">
         @include('inc.breadcrumb',['bcrumb' => 'bc_level_dua','bc_1'=>'Form Stuff'])
         <div class="subheader">
-            <h1 class="subheader-title">
-                <i class='subheader-icon fal fa-edit'></i> Validation
-                <small>
-                    Provide valuable, actionable feedback to your users with HTML5 form validation. Choose from the browser default validation feedback, or implement custom messages with our built-in classes and starter JavaScript.
-                </small>
-            </h1>
+            @component('inc.subheader',['subheader_title'=>'st_type_2'])
+            @slot('sh_icon') edit @endslot
+            @slot('sh_descipt') Provide valuable, actionable feedback to your users with HTML5 form validation. Choose from the browser default validation feedback, or implement custom messages with our built-in classes and starter JavaScript. @endslot
+            @endcomponent
         </div>
         <div class="alert alert-primary alert-dismissible">
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">

@@ -4,12 +4,13 @@
 	<main id="js-page-content" role="main" class="page-content">
 		@include('inc.breadcrumb',['bcrumb' => 'bc_level_dua','bc_1'=>'Theme Settings'])
 		<div class="subheader">
-			<h1 class="subheader-title">
-				Theme Settings: <span class='fw-300'>Saving to Database</span>
-				<small>
+            @component('inc.subheader',['subheader_title'=>'st_type_4'])
+                @slot('sh_titile_main') Theme Settings: @endslot
+                @slot('sh_titile_sub') Saving to Database @endslot
+				@slot('sh_descipt') 
 					How to save and load settings from database
-				</small>
-			</h1>
+				@endslot
+			@endcomponent
 		</div>
 		<div class="row">
 			<div class="col-xl-12">

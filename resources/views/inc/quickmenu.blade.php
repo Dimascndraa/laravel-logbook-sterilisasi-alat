@@ -8,7 +8,7 @@
     <a href="#" class="menu-item btn" data-toggle="tooltip" data-placement="left" title="Scroll Top">
         <i class="fal fa-arrow-up"></i>
     </a>
-    <a href="/page_login-alt" class="menu-item btn" data-toggle="tooltip" data-placement="left" title="Logout">
+    <a href="/page_login_alt" class="menu-item btn" data-toggle="tooltip" data-placement="left" title="Logout">
         <i class="fal fa-sign-out"></i>
     </a>
     <a href="#" class="menu-item btn" data-action="app-fullscreen" data-toggle="tooltip" data-placement="left" title="Full Screen">

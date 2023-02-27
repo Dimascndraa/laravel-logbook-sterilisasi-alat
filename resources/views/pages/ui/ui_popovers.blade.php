@@ -1,15 +1,13 @@
 @extends('inc.layout')
-@section('title','UI Popovers')
+@section('title','Popovers')
 @section('content')
 	<main id="js-page-content" role="main" class="page-content">
 		@include('inc.breadcrumb',['bcrumb' => 'bc_level_dua','bc_1'=>'UI Components'])
 		<div class="subheader">
-			<h1 class="subheader-title">
-				<i class='subheader-icon fal fa-window'></i> Popovers
-				<small>
-					Documentation and examples for adding Bootstrap popovers, like those found in iOS, to any element on your site.
-				</small>
-			</h1>
+			@component('inc.subheader',['subheader_title'=>'st_type_2'])
+			@slot('sh_icon') window @endslot
+			@slot('sh_descipt') Documentation and examples for adding Bootstrap popovers, like those found in iOS, to any element on your site. @endslot
+			@endcomponent
 		</div>
 		<div class="row">
 			<div class="col-xl-6">

@@ -1,15 +1,13 @@
 @extends('inc.layout')
-@section('title','UI Tabs & Accordions')
+@section('title','Tabs & Accordions')
 @section('content')
 	<main id="js-page-content" role="main" class="page-content">
 		@include('inc.breadcrumb',['bcrumb' => 'bc_level_dua','bc_1'=>'UI Components'])
 		<div class="subheader">
-			<h1 class="subheader-title">
-				<i class='subheader-icon fal fa-window'></i> Tabs & Accordions
-				<small>
-					tabs-and-accordions description
-				</small>
-			</h1>
+			@component('inc.subheader',['subheader_title'=>'st_type_2'])
+			@slot('sh_icon') window @endslot
+			@slot('sh_descipt') tabs-and-accordions description @endslot
+			@endcomponent
 		</div>
 		tabs-and-accordions
 	</main>

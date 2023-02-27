@@ -1,14 +1,13 @@
 @extends('inc.layout')
-@section('title','Basic Tables')
+@section('title','Generate Table Style')
 @section('content')
 	<main id="js-page-content" role="main" class="page-content">
 		@include('inc.breadcrumb',['bcrumb' => 'bc_level_dua','bc_1'=>'Tables'])
 		<div class="subheader">
-			<h1 class="subheader-title">
-				<i class='fal fa-th-list text-primary'></i> Generate Table Style
-				<small>
-				</small>
-			</h1>
+			@component('inc.subheader',['subheader_title'=>'st_type_2'])
+			@slot('sh_icon') th-list text-primary @endslot
+			@slot('sh_descipt')  @endslot
+			@endcomponent
 		</div>
 		<div class="alert alert-primary">
 			<div class="d-flex flex-start w-100">

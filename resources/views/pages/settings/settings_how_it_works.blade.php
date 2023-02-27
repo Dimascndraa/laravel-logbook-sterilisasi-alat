@@ -4,12 +4,11 @@
 	<main id="js-page-content" role="main" class="page-content">
 		@include('inc.breadcrumb',['bcrumb' => 'bc_level_dua','bc_1'=>'Theme Settings'])
 		<div class="subheader">
-			<h1 class="subheader-title">
-				Theme Settings: <span class='fw-300'>How it works</span>
-				<small>
-					<span class='fw-500 color-info-700'>Mix and match</span> layout options to create over <span class='fw-500 color-info-700'>36 layout possibilities</span>. Get the perfect layout to suite your business needs
-				</small>
-			</h1>
+            @component('inc.subheader',['subheader_title'=>'st_type_4'])
+                @slot('sh_titile_main') Theme Settings: @endslot
+                @slot('sh_titile_sub') How it works @endslot
+				@slot('sh_descipt') <span class='fw-500 color-info-700'>Mix and match</span> layout options to create over <span class='fw-500 color-info-700'>36 layout possibilities</span>. Get the perfect layout to suite your business needs @endslot
+			@endcomponent
 		</div>
 		<div class="row">
 			<div class="col-sm-12 col-lg-6 col-xl-6">

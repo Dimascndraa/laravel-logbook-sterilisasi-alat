@@ -1,15 +1,13 @@
 @extends('inc.layout')
-@section('title','UI Breadcrumbs')
+@section('title','Breadcrumbs')
 @section('content')
 	<main id="js-page-content" role="main" class="page-content">
 		@include('inc.breadcrumb',['bcrumb' => 'bc_level_dua','bc_1'=>'UI Components'])
 		<div class="subheader">
-			<h1 class="subheader-title">
-				<i class='subheader-icon fal fa-window'></i> Breadcrumbs
-				<small>
-					Indicate the current page’s location within a navigational hierarchy. Separators are automatically added in CSS through <code>::before</code> and content.
-				</small>
-			</h1>
+			@component('inc.subheader',['subheader_title'=>'st_type_2'])
+			@slot('sh_icon') window @endslot
+			@slot('sh_descipt') Indicate the current page’s location within a navigational hierarchy. Separators are automatically added in CSS through <code>::before</code> and content. @endslot
+			@endcomponent
 		</div>
 		<div class="row">
 			<div class="col-xl-6">

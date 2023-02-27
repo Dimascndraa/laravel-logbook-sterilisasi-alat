@@ -4,12 +4,11 @@
     <main id="js-page-content" role="main" class="page-content">
         @include('inc.breadcrumb',['bcrumb' => 'bc_level_dua','bc_1'=>'Form Plugins'])
         <div class="subheader">
-            <h1 class="subheader-title">
-                <i class='subheader-icon fal fa-credit-card-front'></i> Summernote<sup class='badge badge-primary fw-500'>ADDON</sup>
-                <small>
-                    A JavaScript library that helps you create WYSIWYG editors online.
-                </small>
-            </h1>
+            @component('inc.subheader',['subheader_title'=>'st_type_5'])
+                @slot('sh_icon') credit-card-front @endslot
+                @slot('sh_titile_main') Summernote <sup class='badge badge-primary fw-500'>ADDON</sup> @endslot
+                @slot('sh_descipt') A JavaScript library that helps you create WYSIWYG editors online. @endslot
+            @endcomponent  
         </div>
         <div class="alert alert-primary">
             <div class="d-flex flex-start w-100">

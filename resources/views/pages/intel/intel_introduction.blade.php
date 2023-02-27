@@ -4,12 +4,10 @@
 	<main id="js-page-content" role="main" class="page-content">
 		@include('inc.breadcrumb',['bcrumb' => 'bc_level_dua','bc_1'=>'Application Intel'])
 		<div class="subheader">
-			<h1 class="subheader-title">
-				<i class='fal fa-info-circle'></i> Introduction
-				<small>
-					A brief introduction to this WebApp
-				</small>
-			</h1>
+            @component('inc.subheader',['subheader_title'=>'st_type_2'])
+                @slot('sh_icon') info-circle @endslot
+                @slot('sh_descipt') A brief introduction to this WebApp @endslot
+            @endcomponent
 		</div>
 		<div class="fs-lg fw-300 p-5 bg-white border-faded rounded mb-g">
 			<h3 class="mb-g">

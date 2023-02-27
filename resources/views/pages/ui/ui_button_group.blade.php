@@ -1,15 +1,13 @@
 @extends('inc.layout')
-@section('title','UI Button Group')
+@section('title','Button Group')
 @section('content')
 	<main id="js-page-content" role="main" class="page-content">
 		@include('inc.breadcrumb',['bcrumb' => 'bc_level_dua','bc_1'=>'UI Components'])
 		<div class="subheader">
-			<h1 class="subheader-title">
-				<i class='subheader-icon fal fa-window'></i> Button Group
-				<small>
-					Group a series of buttons together on a single line with the button group, and super-power them with JavaScript.
-				</small>
-			</h1>
+			@component('inc.subheader',['subheader_title'=>'st_type_2'])
+			@slot('sh_icon') window @endslot
+			@slot('sh_descipt') Group a series of buttons together on a single line with the button group, and super-power them with JavaScript. @endslot
+			@endcomponent
 		</div>
 		<div class="row">
 			<div class="col-sm-12">

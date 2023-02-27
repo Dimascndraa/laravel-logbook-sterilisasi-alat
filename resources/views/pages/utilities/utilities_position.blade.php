@@ -4,12 +4,10 @@
 	<main id="js-page-content" role="main" class="page-content">
 		@include('inc.breadcrumb',['bcrumb' => 'bc_level_dua','bc_1'=>'Utilities'])
 		<div class="subheader">
-			<h1 class="subheader-title">
-				<i class='subheader-icon fal fa-window'></i> Position
-				<small>
-					Use these shorthand utilities for quickly configuring the position of an element.
-				</small>
-			</h1>
+			@component('inc.subheader',['subheader_title'=>'st_type_2'])
+			@slot('sh_icon') window @endslot
+			@slot('sh_descipt') Use these shorthand utilities for quickly configuring the position of an element. @endslot
+			@endcomponent
 		</div>
 		<div class="alert alert-primary alert-dismissible">
 			<button type="button" class="close" data-dismiss="alert" aria-label="Close">

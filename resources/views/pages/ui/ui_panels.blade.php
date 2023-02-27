@@ -1,17 +1,15 @@
 @extends('inc.layout')
-@section('title','UI Panels')
+@section('title','Panels')
 @section('menuui_components','active open')
 @section('menuui_panels','active')
 @section('content')
 	<main id="js-page-content" role="main" class="page-content">
 		@include('inc.breadcrumb',['bcrumb' => 'bc_level_dua','bc_1'=>'UI Components'])
 		<div class="subheader">
-			<h1 class="subheader-title">
-				<i class='subheader-icon fal fa-window'></i> Panels
-				<small>
-					Panels can be used in almost any situation, helping wrap everything in a slick & lightweight container
-				</small>
-			</h1>
+			@component('inc.subheader',['subheader_title'=>'st_type_2'])
+			@slot('sh_icon') window @endslot
+			@slot('sh_descipt') Panels can be used in almost any situation, helping wrap everything in a slick & lightweight container @endslot
+			@endcomponent
 		</div>
 		<div class="alert alert-primary alert-dismissible">
 			<button type="button" class="close" data-dismiss="alert" aria-label="Close">

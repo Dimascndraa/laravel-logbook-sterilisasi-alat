@@ -4,12 +4,10 @@
 	<main id="js-page-content" role="main" class="page-content">
 		@include('inc.breadcrumb',['bcrumb' => 'bc_level_dua','bc_1'=>'Package Info'])
 		<div class="subheader">
-			<h1 class="subheader-title">
-				<i class='subheader-icon fal fa-tag'></i> App & Plugin Licensing
-				<small>
-					Product licenses explained
-				</small>
-			</h1>
+            @component('inc.subheader',['subheader_title'=>'st_type_2'])
+                @slot('sh_icon') tag @endslot
+                @slot('sh_descipt') Product licenses explained @endslot
+            @endcomponent			
 		</div>
 		<div class="card mb-g">
 			<div class="card-body">

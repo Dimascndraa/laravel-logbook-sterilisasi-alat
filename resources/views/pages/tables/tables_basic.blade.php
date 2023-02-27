@@ -4,12 +4,10 @@
 	<main id="js-page-content" role="main" class="page-content">
 		@include('inc.breadcrumb',['bcrumb' => 'bc_level_dua','bc_1'=>'Tables'])
 		<div class="subheader">
-			<h1 class="subheader-title">
-				<i class='fal fa-th-list text-primary'></i> Basic tables
-				<small>
-					Documentation and examples for opt-in styling of tables (given their prevelant use in JavaScript plugins) with Bootstrap.
-				</small>
-			</h1>
+			@component('inc.subheader',['subheader_title'=>'st_type_2'])
+			@slot('sh_icon') th-list text-primary @endslot
+			@slot('sh_descipt') Documentation and examples for opt-in styling of tables (given their prevelant use in JavaScript plugins) with Bootstrap. @endslot
+			@endcomponent
 		</div>
 		<div class="row">
 			<div class="col-lg-12 col-xl-6">

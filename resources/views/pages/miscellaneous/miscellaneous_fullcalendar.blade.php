@@ -4,12 +4,11 @@
     <main id="js-page-content" role="main" class="page-content">
         @include('inc.breadcrumb',['bcrumb' => 'bc_level_dua','bc_1'=>'Miscellaneous'])
         <div class="subheader">
-            <h1 class="subheader-title">
-                <i class='subheader-icon fal fa-globe'></i> FullCalendar<sup class='badge badge-primary fw-500'>ADDON</sup>
-                <small>
-                    Display a full-size drag-n-drop event calendar.
-                </small>
-            </h1>
+            @component('inc.subheader',['subheader_title'=>'st_type_5'])
+                @slot('sh_icon') globe @endslot
+                @slot('sh_titile_main') FullCalendar<sup class='badge badge-primary fw-500'>ADDON</sup> @endslot
+                @slot('sh_descipt') Display a full-size drag-n-drop event calendar. @endslot
+            @endcomponent
         </div>
         <div class="alert alert-primary">
             <div class="d-flex flex-start w-100">

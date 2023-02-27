@@ -4,12 +4,11 @@
 	<main id="js-page-content" role="main" class="page-content">
         @include('inc.breadcrumb',['bcrumb' => 'bc_level_tiga','bc_1'=>'Font Icons','bc_2'=>'Stack Icons'])        
 		<div class="subheader">
-			<h1 class="subheader-title">
-				Stack Icons: <span class='fw-300'>Generate Stack</span> <sup class='badge badge-success fw-500'>ADDON</sup>
-				<small>
-					Generate your unique stack Icon
-				</small>
-			</h1>
+			@component('inc.subheader',['subheader_title'=>'st_type_4'])
+			@slot('sh_titile_main') Stack Icons: @endslot
+			@slot('sh_titile_sub') <span class='fw-300'>Generate Stack</span> <sup class='badge badge-success fw-500'>ADDON</sup> @endslot
+			@slot('sh_descipt') Generate your unique stack Icon @endslot
+			@endcomponent            
 		</div>
 		<div class="container">
 			<div id="panel-1" class="panel">

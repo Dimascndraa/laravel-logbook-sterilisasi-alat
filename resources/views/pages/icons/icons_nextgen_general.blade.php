@@ -4,12 +4,11 @@
 	<main id="js-page-content" role="main" class="page-content">
 		@include('inc.breadcrumb',['bcrumb' => 'bc_level_tiga','bc_1'=>'Font Icons','bc_2'=>'NextGen Icons'])
 		<div class="subheader">
-			<h1 class="subheader-title">
-				NextGen Icons: <span class='fw-300'>General</span>
-				<small>
-					NextGen Icons description
-				</small>
-			</h1>
+			@component('inc.subheader',['subheader_title'=>'st_type_4'])
+			@slot('sh_titile_main') NextGen Icons: @endslot
+			@slot('sh_titile_sub') <span class='fw-300'>General</span> @endslot
+			@slot('sh_descipt') NextGen Icons description @endslot
+			@endcomponent
 		</div>
 		<!-- input group search box -->
 		<div class="input-group input-group-lg mb-3">

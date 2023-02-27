@@ -4,12 +4,9 @@
 	<main id="js-page-content" role="main" class="page-content">
 		@include('inc.breadcrumb',['bcrumb' => 'bc_level_dua','bc_1'=>'Utilities'])
 		<div class="subheader">
-			<h1 class="subheader-title">
-				Borders
-				<small>
-					Use border utilities to quickly style the border and border-radius of an element. Great for images, buttons, or any other element.
-				</small>
-			</h1>
+			@component('inc.subheader',['subheader_title'=>'st_type_3'])
+			@slot('sh_descipt') Use border utilities to quickly style the border and border-radius of an element. Great for images, buttons, or any other element. @endslot
+			@endcomponent
 		</div>
 		<div class="row">
 			<div class="col-xl-6">

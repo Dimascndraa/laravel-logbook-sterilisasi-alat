@@ -1,15 +1,13 @@
 @extends('inc.layout')
-@section('title','UI Side Panel')
+@section('title','Side Panel')
 @section('content')
 	<main id="js-page-content" role="main" class="page-content">
 		@include('inc.breadcrumb',['bcrumb' => 'bc_level_dua','bc_1'=>'UI Components'])
 		<div class="subheader">
-			<h1 class="subheader-title">
-				<i class='subheader-icon fal fa-window'></i> Side Panel
-				<small>
-					A neat way to present side panels
-				</small>
-			</h1>
+			@component('inc.subheader',['subheader_title'=>'st_type_2'])
+			@slot('sh_icon') window @endslot
+			@slot('sh_descipt') A neat way to present side panels @endslot
+			@endcomponent
 		</div>
 		<div class="ie-only alert alert-danger d-none">
 			<h4>This message is visible to IE users only!</h4>

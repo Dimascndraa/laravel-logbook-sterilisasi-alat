@@ -4,12 +4,11 @@
     <main id="js-page-content" role="main" class="page-content">
         @include('inc.breadcrumb',['bcrumb' => 'bc_level_dua','bc_1'=>'Notifications'])
         <div class="subheader">
-            <h1 class="subheader-title">
-                <i class='subheader-icon fal fa-exclamation-circle'></i> Toastr <sup class='badge badge-primary fw-500'>ADDON</sup>
-                <small>
-                    Simple to use, lightweight notification plugin
-                </small>
-            </h1>
+            @component('inc.subheader',['subheader_title'=>'st_type_5'])
+                @slot('sh_icon') exclamation-circle @endslot
+                @slot('sh_titile_main') Toastr <sup class='badge badge-primary fw-500'>ADDON</sup> @endslot
+                @slot('sh_descipt') Simple to use, lightweight notification plugin @endslot
+            @endcomponent            
         </div>
         <div class="alert alert-primary">
             <div class="d-flex flex-start w-100">

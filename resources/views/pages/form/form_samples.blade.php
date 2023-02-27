@@ -4,12 +4,10 @@
     <main id="js-page-content" role="main" class="page-content">
         @include('inc.breadcrumb',['bcrumb' => 'bc_level_dua','bc_1'=>'Form Stuff'])
         <div class="subheader">
-            <h1 class="subheader-title">
-                <i class='subheader-icon fal fa-edit'></i> Samples
-                <small>
-                    Default input elements for forms
-                </small>
-            </h1>
+            @component('inc.subheader',['subheader_title'=>'st_type_2'])
+            @slot('sh_icon') edit @endslot
+            @slot('sh_descipt') Default input elements for forms @endslot
+            @endcomponent
         </div>
         <div class="row">
             <div class="col-xl-6">

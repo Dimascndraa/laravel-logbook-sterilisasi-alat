@@ -4,12 +4,11 @@
                     <main id="js-page-content" role="main" class="page-content">
                         @include('inc.breadcrumb',['bcrumb' => 'bc_level_dua','bc_1'=>'Core Plugins'])
                         <div class="subheader">
-                            <h1 class="subheader-title">
-                                <i class='subheader-icon fal fa-shield-alt'></i> App.core.js <sup class='badge badge-danger fw-500'>CORE</sup>
-                                <small>
-                                    The heart and soul of SmartAdmin - Responsive WebApp
-                                </small>
-                            </h1>
+                            @component('inc.subheader',['subheader_title'=>'st_type_5'])
+                            @slot('sh_icon') shield-alt @endslot
+                            @slot('sh_titile_main') App.core.js <sup class='badge badge-danger fw-500'>CORE</sup> @endslot
+                            @slot('sh_descipt') The heart and soul of SmartAdmin - Responsive WebApp @endslot
+                            @endcomponent
                         </div>
                         <div class="row">
                             <div class="col-xl-6">

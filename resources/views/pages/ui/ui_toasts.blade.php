@@ -1,15 +1,13 @@
 @extends('inc.layout')
-@section('title','UI Toasts')
+@section('title','Toasts')
 @section('content')
 	<main id="js-page-content" role="main" class="page-content">
 		@include('inc.breadcrumb',['bcrumb' => 'bc_level_dua','bc_1'=>'UI Components'])
 		<div class="subheader">
-			<h1 class="subheader-title">
-				<i class='subheader-icon fal fa-window'></i> Toasts
-				<small>
-					Push notifications to your visitors with a toast, a lightweight and easily customizable alert message.
-				</small>
-			</h1>
+			@component('inc.subheader',['subheader_title'=>'st_type_2'])
+			@slot('sh_icon') window @endslot
+			@slot('sh_descipt') Push notifications to your visitors with a toast, a lightweight and easily customizable alert message. @endslot
+			@endcomponent
 		</div>
 		<div class="alert alert-primary alert-dismissible">
 			<button type="button" class="close" data-dismiss="alert" aria-label="Close">

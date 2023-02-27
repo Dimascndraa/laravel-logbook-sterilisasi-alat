@@ -4,12 +4,11 @@
     <main id="js-page-content" role="main" class="page-content">
         @include('inc.breadcrumb',['bcrumb' => 'bc_level_dua','bc_1'=>'Statistics'])
         <div class="subheader">
-            <h1 class="subheader-title">
-                <i class='subheader-icon fal fa-chart-pie'></i> Flot <sup class='badge badge-primary fw-500'>ADDON</sup>
-                <small>
-                    Flot is a pure JavaScript plotting library for jQuery, with a focus on simple usage, attractive looks and interactive features
-                </small>
-            </h1>
+            @component('inc.subheader',['subheader_title'=>'st_type_5'])
+            @slot('sh_icon') chart-pie @endslot
+            @slot('sh_titile_main') Flot <sup class='badge badge-primary fw-500'>ADDON</sup> @endslot
+            @slot('sh_descipt') Flot is a pure JavaScript plotting library for jQuery, with a focus on simple usage, attractive looks and interactive features @endslot
+            @endcomponent            
         </div>
         <div class="alert alert-primary">
             <div class="d-flex flex-start w-100">

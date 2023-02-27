@@ -4,12 +4,11 @@
     <main id="js-page-content" role="main" class="page-content">
         @include('inc.breadcrumb',['bcrumb' => 'bc_level_dua','bc_1'=>'Form Plugins'])
         <div class="subheader">
-            <h1 class="subheader-title">
-                <i class='subheader-icon fal fa-credit-card-front'></i> Select2<sup class='badge badge-primary fw-500'>ADDON</sup>
-                <small>
-                    Select2 is a jQuery-based replacement for select boxes. It supports searching, remote data sets, and pagination of results.
-                </small>
-            </h1>
+            @component('inc.subheader',['subheader_title'=>'st_type_5'])
+                @slot('sh_icon') credit-card-front @endslot
+                @slot('sh_titile_main') Select2 <sup class='badge badge-primary fw-500'>ADDON</sup> @endslot
+                @slot('sh_descipt') Select2 is a jQuery-based replacement for select boxes. It supports searching, remote data sets, and pagination of results. @endslot
+            @endcomponent
         </div>
         <div class="alert alert-primary">
             <div class="d-flex flex-start w-100">

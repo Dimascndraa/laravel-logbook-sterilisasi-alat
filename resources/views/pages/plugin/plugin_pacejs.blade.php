@@ -4,12 +4,11 @@
     <main id="js-page-content" role="main" class="page-content">
         @include('inc.breadcrumb',['bcrumb' => 'bc_level_dua','bc_1'=>'Core Plugins'])
         <div class="subheader">
-            <h1 class="subheader-title">
-                <i class='subheader-icon fal fa-shield-alt'></i> PaceJS <sup class='badge badge-warning fw-500'>RECOMMENDED</sup>
-                <small>
-                    Include pace.js and a CSS theme of your choice, and you get a beautiful progress indicator for your page load and ajax navigation.
-                </small>
-            </h1>
+            @component('inc.subheader',['subheader_title'=>'st_type_5'])
+            @slot('sh_icon') shield-alt @endslot
+            @slot('sh_titile_main') PaceJS <sup class='badge badge-warning fw-500'>RECOMMENDED</sup> @endslot
+            @slot('sh_descipt') Include pace.js and a CSS theme of your choice, and you get a beautiful progress indicator for your page load and ajax navigation. @endslot
+            @endcomponent
         </div>
         <div class="alert alert-primary">
             <div class="d-flex flex-start w-100">

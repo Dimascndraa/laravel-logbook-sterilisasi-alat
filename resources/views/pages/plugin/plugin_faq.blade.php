@@ -4,12 +4,10 @@
     <main id="js-page-content" role="main" class="page-content">
         @include('inc.breadcrumb',['bcrumb' => 'bc_level_dua','bc_1'=>'Core Plugins'])
         <div class="subheader">
-            <h1 class="subheader-title">
-                <i class='subheader-icon fal fa-shield-alt'></i> Plugins FAQ
-                <small>
-                    The difference types of plugins and its appliaction importance within the template
-                </small>
-            </h1>
+            @component('inc.subheader',['subheader_title'=>'st_type_2'])
+            @slot('sh_icon') shield-alt @endslot
+            @slot('sh_descipt') The difference types of plugins and its appliaction importance within the template @endslot
+            @endcomponent
         </div>
         <div class="row">
             <div class="col">
