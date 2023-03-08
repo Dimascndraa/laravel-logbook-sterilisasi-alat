@@ -59,9 +59,9 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                 </div>
                 <div>
                     <ul class="list-table m-0">
-                        <li><a href="intel_introduction.html" class="text-secondary fw-700">About</a></li>
-                        <li class="pl-3"><a href="info_app_licensing.html" class="text-secondary fw-700">License</a></li>
-                        <li class="pl-3"><a href="info_app_docs.html" class="text-secondary fw-700">Documentation</a></li>
+                        <li><a href="/intel_introduction" class="text-secondary fw-700">About</a></li>
+                        <li class="pl-3"><a href="/info_app_licensing" class="text-secondary fw-700">License</a></li>
+                        <li class="pl-3"><a href="/info_app_docs" class="text-secondary fw-700">Documentation</a></li>
                         <li class="pl-3 fs-xl"><a href="https://wrapbootstrap.com/user/MyOrange" class="text-secondary" target="_blank"><i class="fal fa-question-circle" aria-hidden="true"></i></a></li>
                     </ul>
                 </div>
@@ -79,7 +79,7 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
             <a href="#" class="menu-item btn" data-toggle="tooltip" data-placement="left" title="Scroll Top">
                 <i class="fal fa-arrow-up"></i>
             </a>
-            <a href="page_login-alt.html" class="menu-item btn" data-toggle="tooltip" data-placement="left" title="Logout">
+            <a href="/page_login-alt" class="menu-item btn" data-toggle="tooltip" data-placement="left" title="Logout">
                 <i class="fal fa-sign-out"></i>
             </a>
             <a href="#" class="menu-item btn" data-action="app-fullscreen" data-toggle="tooltip" data-placement="left" title="Full Screen">

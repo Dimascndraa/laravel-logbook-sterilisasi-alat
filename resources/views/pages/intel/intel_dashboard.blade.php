@@ -2,10 +2,9 @@
 @section('title','Dashboard')
 @section('content')
 	<main id="js-page-content" role="main" class="page-content">
-        @include('inc.breadcrumb',['bcrumb' => 'bc_level_satu','bc_1'=>'Application Intel'])
+        @include('inc.breadcrumb',['bcrumb' => 'bc_level_satu'])
         <div class="subheader">
-            @component('inc.subheader',['subheader_title'=>'st_type_2'])
-                @slot('sh_icon') home @endslot
+            @component('inc.subheader',['subheader_title'=>'st_type_2','sh_icon'=>'home'])
                 @slot('sh_descipt') Your first page for content division @endslot
             @endcomponent
 		</div>

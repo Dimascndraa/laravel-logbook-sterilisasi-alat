@@ -4,10 +4,7 @@
 	<main id="js-page-content" role="main" class="page-content">
         @include('inc.breadcrumb',['bcrumb' => 'bc_level_dua','bc_1'=>'Application Intel'])
         <div class="subheader">
-            @component('inc.subheader',['subheader_title'=>'st_type_1'])
-                @slot('sh_icon') chart-area @endslot
-                @slot('sh_titile_main') Analytics @endslot
-                @slot('sh_titile_sub') Dashboard @endslot
+            @component('inc.subheader',['subheader_title'=>'st_type_1','sh_icon'=>'chart-area','sh_titile_main'=>'Analytics','sh_titile_sub'=>'Dashboard'])
 
                 <div class="subheader-block d-lg-flex align-items-center">
                     <div class="d-inline-flex flex-column justify-content-center mr-3">
