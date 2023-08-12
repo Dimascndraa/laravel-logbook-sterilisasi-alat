@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\DatatablesController;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\FormpluginsController;
@@ -29,7 +30,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/', [IntelController::class, 'welcome'])->name('welcome');
+// Route::get('/', [IntelController::class, 'welcome'])->name('welcome');
 
 require __DIR__ . '/auth.php';
 require __DIR__ . '/default_menu.php';
