@@ -1,23 +1,4 @@
 <?php
-
-use App\Http\Controllers\Auth\AuthenticatedSessionController;
-use App\Http\Controllers\DatatablesController;
-use App\Http\Controllers\FormController;
-use App\Http\Controllers\FormpluginsController;
-use App\Http\Controllers\IconsController;
-use App\Http\Controllers\InfoappController;
-use App\Http\Controllers\IntelController;
-use App\Http\Controllers\MiscellaneousController;
-use App\Http\Controllers\NotificationsController;
-use App\Http\Controllers\PageController;
-use App\Http\Controllers\PluginController;
-use App\Http\Controllers\SettingController;
-use App\Http\Controllers\StatisticsController;
-use App\Http\Controllers\TablesController;
-use App\Http\Controllers\UiController;
-use App\Http\Controllers\UtilitiesController;
-use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,6 +12,18 @@ use Illuminate\Support\Facades\Route;
 
 
 // Route::get('/', [IntelController::class, 'welcome'])->name('welcome');
+
+use App\Http\Controllers\ItemController;
+use App\Http\Controllers\ItemSetController;
+use App\Http\Controllers\UnitController;
+use Illuminate\Support\Facades\Route;
+
+Route::middleware(['auth'])->group(function () {
+    Route::resource('/units', UnitController::class);
+    Route::resource('/item-sets', ItemSetController::class);
+    Route::resource('/items', ItemController::class);
+});
+
 
 require __DIR__ . '/auth.php';
 require __DIR__ . '/default_menu.php';
