@@ -5,84 +5,65 @@ namespace App\Http\Controllers;
 use App\Models\Item;
 use App\Models\ItemSet;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ItemController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         return view('menu.item.index', [
             'title' => "Alat",
             'item_sets' => ItemSet::where('status', '1')->orderBy('name')->get(),
-            'items' => Item::orderBy('name')->get()
+            'items' => Item::orderBy('name')->get(),
         ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+        // return $request;
+        $validatedData = $request->validate([
+            'foto' => "max:5120",
+            'item_set_id' => "required|max:255",
+            'name' => "required|max:255",
+            'code' => "required|max:255",
+            'kondisi' => "required|max:255",
+            'status' => "required|max:255",
+        ]);
+
+        if ($request->file('foto')) {
+            $validatedData['foto'] = $request->file('foto')->store('gambar-alat');
+        }
+
+        Item::create($validatedData);
+        return redirect('/items')->with('success', 'Alat berhasil ditambahkan!');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Item  $item
-     * @return \Illuminate\Http\Response
-     */
     public function show(Item $item)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Item  $item
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Item $item)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Item  $item
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, Item $item)
     {
-        //
+        $validatedData = $request->validate([
+            'foto' => "max:5120",
+            'item_sets_id' => "required|max:255",
+            'name' => "required|max:255",
+            'code' => "required|max:255",
+            'kondisi' => "required|max:255",
+            'status' => "required|max:255",
+        ]);
+
+        if ($request->file('foto')) {
+            if ($request->oldImage) {
+                Storage::delete($item->foto);
+                $validatedData['foto'] = $request->file('foto')->store('barang');
+            }
+        }
+        Item::where('id', $item->id)->update($validatedData);
+        return redirect('/items')->with('success', 'Alat berhasil diperbaharui!');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Item  $item
-     * @return \Illuminate\Http\Response
-     */
     public function destroy(Item $item)
     {
         //

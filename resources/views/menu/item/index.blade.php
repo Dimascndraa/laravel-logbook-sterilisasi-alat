@@ -411,8 +411,8 @@
                                     <td style="white-space: nowrap"><a href="/item-sets/{{ $item->id }}" class="">{{
                                             strtoupper($item->name) }}</a></td>
                                     <td style="white-space: nowrap">{{ $item->code }}</td>
-                                    <td style="white-space: nowrap">{{ $item->status == "1" ? "Aktif" : "Nonaktif"
-                                        }}
+                                    <td style="white-space: nowrap">
+                                        {{ $item->status == '1' ? 'Aktif' : 'Nonaktif' }}
                                     </td>
                                     <td style="white-space: nowrap">
                                         <button type="button" class="badge mx-1 badge-primary p-2 border-0 text-white"
@@ -446,7 +446,8 @@
                                                         <select class="form-control w-100" id="ubahItemSet"
                                                             name="item_sets_id">
                                                             @foreach ($item_sets as $item_set)
-                                                            <option value="{{ $item_set->id }}">{{ $item_set->name }}
+                                                            <option value="{{ $item_set->id }}">
+                                                                {{ $item_set->name }}
                                                             </option>
                                                             @endforeach
                                                         </select>
@@ -486,12 +487,12 @@
                                                         </label>
                                                         <select class="form-control w-100" id="ubahStatus"
                                                             name="status">
-                                                            <option value="1" {{ $item->status == "1" ? 'selected' :
-                                                                ''
-                                                                }}>Aktif</option>
-                                                            <option value="0" {{ $item->status == "0" ? 'selected' :
-                                                                ''
-                                                                }}>Nonaktif</option>
+                                                            <option value="1" {{ $item->status == '1' ? 'selected' : ''
+                                                                }}>
+                                                                Aktif</option>
+                                                            <option value="0" {{ $item->status == '0' ? 'selected' : ''
+                                                                }}>
+                                                                Nonaktif</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -531,7 +532,7 @@
     data-backdrop="static" style="z-index: 9999">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
-            <form autocomplete="off" novalidate action="/item-sets" method="post">
+            <form autocomplete="off" novalidate action="/items" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="modal-header">
                     <h5 class="modal-title">Tambah Item Set</h5>
@@ -541,10 +542,22 @@
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
+                        <label for="foto">Gambar</label>
+                        <img class="image-preview img-fluid mb-3 col-sm-5 d-block">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="foto" name="foto"
+                                onchange="previewImage()">
+                            <label class="custom-file-label" for="foto">Pilih Gambar Galeri</label>
+                        </div>
+                        @error('foto')
+                        <p class="text-danger">{{ $message }}</p>
+                        @enderror
+                    </div>
+                    <div class="form-group">
                         <label class="form-label" for="tambahItemSet">
                             Set Alat
                         </label>
-                        <select class="form-control w-100" id="tambahItemSet" name="item_sets_id">
+                        <select class="form-control w-100" id="tambahItemSet" name="item_set_id">
                             @foreach ($item_sets as $item_set)
                             <option value="{{ $item_set->id }}">{{ $item_set->name }}</option>
                             @endforeach
@@ -606,19 +619,19 @@
 
 <script>
     /* demo scripts for change table color */
-    /* change background */
-    
-    $(document).ready(function() {
-        $(function() {
-            $('#tambahItemSet').select2();
-            $('#ubahItemSet').select2();
-            $('#tambahKondisi').select2();
-            $('#ubahKondisi').select2();
-            $('#tambahStatus').select2();
-            $('#ubahStatus').select2();
-        });
-        
-        $('#dt-basic-example').dataTable({
+        /* change background */
+
+        $(document).ready(function() {
+            $(function() {
+                $('#tambahItemSet').select2();
+                $('#ubahItemSet').select2();
+                $('#tambahKondisi').select2();
+                $('#ubahKondisi').select2();
+                $('#tambahStatus').select2();
+                $('#ubahStatus').select2();
+            });
+
+            $('#dt-basic-example').dataTable({
                 responsive: true,
                 dom: 'Bfrtip',
                 buttons: [{
@@ -678,5 +691,18 @@
 
         });
 
+        function previewImage() {
+            const image = document.querySelector('#foto');
+            const imgPreview = document.querySelector('.image-preview')
+
+            imgPreview.style.display = 'block';
+
+            const oFReader = new FileReader();
+            oFReader.readAsDataURL(image.files[0])
+
+            oFReader.onload = function(oFREvent) {
+                imgPreview.src = oFREvent.target.result;
+            }
+        }
 </script>
 @endsection
