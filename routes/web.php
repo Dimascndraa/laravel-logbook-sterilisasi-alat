@@ -16,12 +16,24 @@
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\ItemSetController;
 use App\Http\Controllers\UnitController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware(['auth'])->group(function () {
+    // Modul Unit
     Route::resource('/units', UnitController::class);
+
+    // Modul Set ALat 
     Route::resource('/item-sets', ItemSetController::class);
+
+    // Modul Alat
     Route::resource('/items', ItemController::class);
+
+    // Modul User
+    Route::resource('/users', UserController::class);
+    Route::put('/users/{user:id}/pindah', [UserController::class, 'pindahkan']);
+    Route::put('/users/{user:id}/update-password', [UserController::class, 'updatePassword']);
+    Route::put('/users/{user:id}/akses', [UserController::class, 'akses']);
 });
 
 
