@@ -43,7 +43,38 @@
                     <span class="nav-link-text" data-i18n="nav.application_dashboard">Dashboard</span>
                 </a>
             </li>
+
+            @can('user')
+            <li class="{{ set_active('/submissions') }}">
+                <a href="/submissions" title="Penyerahan Barang" data-filter-tags="penyerahan barang">
+                    <i class="fal fa-inbox-out"></i>
+                    <span class="nav-link-text" data-i18n="nav.penyerahan_barang">Penyerahan Barang</span>
+                </a>
+            </li>
+            <li class="{{ set_active('/penerimaan-barang') }}">
+                <a href="/penerimaan-barang" title="Penerimaan Barang" data-filter-tags="penerimaan barang">
+                    <i class="fal fa-inbox-in"></i>
+                    <span class="nav-link-text" data-i18n="nav.penerimaan_barang">Penermaan Barang</span>
+                </a>
+            </li>
+            @endcan
+
             @can('admin')
+            <li class="{{ set_active('/submissions') }}">
+                <a href="/submissions" title="Penyerahan Barang" data-filter-tags="penyerahan barang">
+                    <i class="fal fa-inbox-out"></i>
+                    <span class="nav-link-text" data-i18n="nav.penyerahan_barang">Penyerahan Barang</span>
+                </a>
+            </li>
+            <li class="{{ set_active('/penerimaan-barang') }}">
+                <a href="/penerimaan-barang" title="Penerimaan Barang" data-filter-tags="penerimaan barang">
+                    <i class="fal fa-inbox-in"></i>
+                    <span class="nav-link-text" data-i18n="nav.penerimaan_barang">Penermaan Barang</span>
+                </a>
+            </li>
+            @endcan
+
+            @can('superadmin')
             <li class="{{ set_active_mainmenu(['units','item-sets','items','users']) }}">
                 <a href="#" title="Master Data" data-filter-tags="master data">
                     <i class="fal fa-database"></i>
@@ -74,7 +105,6 @@
                     </li>
                 </ul>
             </li>
-            @endcan
             <li
                 class="{{ set_active_mainmenu(['intel_analytics_dashboard','intel_marketing_dashboard','intel_introduction','intel_privacy','intel_build_notes', 'settings_how_it_works','intel_analytics_dashboard','intel_marketing_dashboard','intel_introduction','intel_privacy','intel_build_notes', 'settings_how_it_works', 'settings_layout_options','settings_theme_modes','settings_skin_options','settings_saving_db','info_app_docs','info_app_licensing','info_app_flavors','ui_alerts','ui_accordion','ui_badges','ui_breadcrumbs','ui_buttons','ui_button_group','ui_cards','ui_carousel','ui_collapse','ui_dropdowns','ui_list_filter','ui_modal','ui_navbars','ui_panels','ui_pagination','ui_popovers','ui_progress_bars','ui_scrollspy','ui_side_panel','ui_spinners','ui_tabs_pills','ui_toasts','ui_tooltips','utilities_borders','utilities_clearfix','utilities_color_pallet','utilities_display_property','utilities_fonts','utilities_flexbox','utilities_helpers','utilities_position','utilities_responsive_grid','utilities_sizing','utilities_spacing','utilities_typography','icons_fontawesome_light','icons_fontawesome_regular','icons_fontawesome_solid','icons_fontawesome_brand','icons_nextgen_general','icons_nextgen_base','icons_stack_showcase','icons_stack_generate','icons_nextgen_general','icons_nextgen_base','icons_stack_showcase','icons_stack_generate','tables_basic','tables_generate_style','form_basic_inputs','form_checkbox_radio','form_input_groups','form_validation','form_elements','form_samples','plugin_faq','plugin_waves','plugin_pacejs','plugin_smartpanels','plugin_bootbox','plugin_slimscroll','plugin_throttle','plugin_navigation','plugin_i18next','plugin_appcore','datatables_basic','datatables_autofill','datatables_buttons','datatables_export','datatables_colreorder','datatables_columnfilter','datatables_fixedcolumns','datatables_fixedheader','datatables_keytable','datatables_responsive','datatables_responsive_alt','datatables_rowgroup','datatables_rowreorder','datatables_scroller','datatables_select','datatables_alteditor','statistics_flot','statistics_chartjs','statistics_chartist','statistics_c3','statistics_peity','statistics_sparkline','statistics_easypiechart','statistics_dygraph','notifications_sweetalert2','notifications_toastr','form_plugins_colorpicker','form_plugins_datepicker','form_plugins_daterange_picker','form_plugins_dropzone','form_plugins_ionrangeslider','form_plugins_inputmask','form_plugin_imagecropper','form_plugin_select2','form_plugin_summernote','miscellaneous_fullcalendar','miscellaneous_lightgallery','page_chat','page_contacts','page_forum_list','page_forum_threads','page_forum_discussion','page_inbox_general','page_inbox_read','page_inbox_write','page_invoice','page_forget','page_locked','page_login','page_login_alt','page_register','page_confirmation','page_error','page_error_404','page_error_announced','page_profile','page_search','blank',]) }}">
                 <a href="#" title="Application Intel" data-filter-tags="application intel">
@@ -1155,6 +1185,7 @@
                     </li>
                 </ul>
             </li>
+            @endcan
         </ul>
         <div class="filter-message js-filter-message bg-success-600"></div>
     </nav>

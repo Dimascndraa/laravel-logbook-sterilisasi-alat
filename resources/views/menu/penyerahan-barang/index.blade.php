@@ -1,23 +1,26 @@
 @extends('inc.layout')
-@section('title', 'User')
+@section('title', 'Peyerahan Barang')
 @section('content')
 <main id="js-page-content" role="main" class="page-content">
+
+    @can('user')
     <div class="row mb-5">
         <div class="col-xl-12">
             <button type="button" class="btn btn-primary waves-effect waves-themed" data-toggle="modal"
                 data-target="#default-example-modal-lg">
                 <span class="fal fa-plus-circle mr-1"></span>
-                Tambah User
+                Tambah Penyerahan Barang
             </button>
         </div>
     </div>
+    @endcan
 
     <div class="row">
         <div class="col-xl-12">
             <div id="panel-1" class="panel">
                 <div class="panel-hdr">
                     <h2>
-                        Table <span class="fw-300"><i>User</i></span>
+                        Table <span class="fw-300">{{ $title }}</span>
                     </h2>
                     <div class="panel-toolbar">
                         <button class="btn btn-primary btn-sm" data-toggle="dropdown">Table Style</button>
@@ -392,304 +395,43 @@
                         <table id="dt-basic-example" class="table table-bordered table-hover table-striped w-100">
                             <thead>
                                 <tr>
-                                    {{-- <th style="white-space: nowrap">Foto</th> --}}
-                                    <th style="white-space: nowrap">Nama User</th>
-                                    <th style="white-space: nowrap">Username</th>
-                                    <th style="white-space: nowrap">Email</th>
-                                    <th style="white-space: nowrap">Unit</th>
+                                    <th style="white-space: nowrap">No</th>
+                                    <th style="white-space: nowrap">Jam</th>
+                                    <th style="white-space: nowrap">User yang menyerahkan</th>
+                                    <th style="white-space: nowrap">User yang menerima</th>
                                     <th style="white-space: nowrap">Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($users as $user)
-                                <div class="modal fade" id="unit{{ $user->id }}" tabindex="-1" role="dialog"
-                                    aria-hidden="true">
-                                    <div class="modal-dialog modal-lg" role="document">
-                                        <div class="modal-content">
-                                            <form autocomplete="off" novalidate action="/users/{{ $user->id }}/pindah"
-                                                method="post" enctype="multipart/form-data">
-                                                @method('put')
-                                                @csrf
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title">Pindahkan {{ $user->name }} ke Unit</h5>
-                                                    <button type="button" class="close" data-dismiss="modal"
-                                                        aria-label="Close">
-                                                        <span aria-hidden="true"><i class="fal fa-times"></i></span>
-                                                    </button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <div class="form-group">
-                                                        <label for="unit_id">Nama Unit</label>
-                                                        <select
-                                                            class="form-control w-100 @error('unit_id') is-invalid @enderror"
-                                                            id="single-default" name="unit_id">
-                                                            <optgroup label="Unit">
-                                                                @foreach ($units as $unit)
-                                                                @if (old("unit_id") == $unit->id || $user->unit_id ==
-                                                                $unit->id)
-                                                                <option value="{{ $unit->id }}" selected>{{ $unit->name
-                                                                    }}</option>
-                                                                @else
-                                                                <option value="{{ $unit->id }}">
-                                                                    {{ $unit->name }}
-                                                                </option>
-                                                                @endif
-
-                                                                @endforeach
-                                                                @error('unit_id')
-                                                                <div class="invalid-feedback">{{ $message }}</div>
-                                                                @enderror
-                                                            </optgroup>
-                                                        </select>
-                                                        @error('unit_id')
-                                                        <div class="invalid-feedback">{{ $message }}</div>
-                                                        @enderror
-                                                    </div>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary"
-                                                        data-dismiss="modal">Close</button>
-                                                    <button type="submit" class="btn btn-primary">
-                                                        <span class="fal fa-pencil mr-1"></span>
-                                                        Ubah
-                                                    </button>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-
+                                @foreach ($submissions as $submission)
                                 <tr>
-                                    {{-- <td style="white-space: nowrap">{{ $user->template_user->foto }}</td> --}}
-                                    <td style="white-space: nowrap">{{ $user->name }}</td>
-                                    <td style="white-space: nowrap">{{ $user->username }}</td>
-                                    <td style="white-space: nowrap">{{ $user->email }}</td>
-                                    @if ($user->unit_id === null)
+                                    <td style="white-space: nowrap">{{ $submission->name }}</td>
+                                    <td style="white-space: nowrap">{{ $submission->submissionname }}</td>
+                                    <td style="white-space: nowrap">{{ $submission->email }}</td>
+                                    @if ($submission->unit_id === null)
                                     <td style="white-space: nowrap">*tidak ada unit</td>
                                     @else
-                                    <td style="white-space: nowrap">{{ $user->unit->name }}</td>
+                                    <td style="white-space: nowrap">{{ $submission->unit->name }}</td>
                                     @endif
-
                                     <td style="white-space: nowrap">
                                         <button type="button" class="badge mx-1 badge-primary p-2 border-0 text-white"
-                                            data-toggle="modal" data-target="#ubah-user{{ $user->id }}" title="Ubah">
+                                            data-toggle="modal" data-target="#ubah-submission{{ $submission->id }}"
+                                            title="Ubah">
                                             <span class="fal fa-pencil"></span>
-                                        </button>
-                                        <button type="button" class="badge mx-1 badge-success p-2 border-0 text-white"
-                                            data-toggle="modal" data-target="#unit{{ $user->id }}" title="ke Unit">
-                                            <span class="fal fa-arrow-circle-right"></span>
-                                        </button>
-                                        <button type="button" class="badge mx-1 badge-secondary p-2 border-0 text-white"
-                                            data-toggle="modal" data-target="#ubah-akses{{ $user->id }}"
-                                            title="Ubah Akses">
-                                            <span class="fal fa-user-secret"></span>
                                         </button>
                                     </td>
                                 </tr>
-
-                                <div class="modal fade" id="ubah-user{{ $user->id }}" tabindex="-1" role="dialog"
-                                    aria-hidden="true">
-                                    <div class="modal-dialog modal-lg" role="document">
-                                        <div class="modal-content">
-                                            <form autocomplete="off" novalidate action="/users/{{ $user->id }}"
-                                                method="post" enctype="multipart/form-data">
-                                                @method('put')
-                                                @csrf
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title">Ubah User</h5>
-                                                    <button type="button" class="close" data-dismiss="modal"
-                                                        aria-label="Close">
-                                                        <span aria-hidden="true"><i class="fal fa-times"></i></span>
-                                                    </button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <div class="form-group">
-                                                        <label for="name">Nama</label>
-                                                        <input type="text" value="{{ old('name', $user->name) }}"
-                                                            class="form-control @error('name') is-invalid @enderror"
-                                                            id="name" name="name" placeholder="Nama User">
-                                                        @error('name')
-                                                        <div class="invalid-feedback">{{ $message }}</div>
-                                                        @enderror
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="username">Username</label>
-                                                        <input type="text"
-                                                            value="{{ old('username', $user->username) }}"
-                                                            class="form-control @error('username') is-invalid @enderror"
-                                                            id="username" name="username" placeholder="Username">
-                                                        @error('username')
-                                                        <div class="invalid-feedback">{{ $message }}</div>
-                                                        @enderror
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="email">Email</label>
-                                                        <input type="text" value="{{ old('email', $user->email) }}"
-                                                            class="form-control @error('email') is-invalid @enderror"
-                                                            id="email" name="email" placeholder="Email">
-                                                        @error('email')
-                                                        <div class="invalid-feedback">{{ $message }}</div>
-                                                        @enderror
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="status">Status</label>
-                                                        <select
-                                                            class="form-control w-100 @error('status') is-invalid @enderror"
-                                                            id="single-default" name="status">
-                                                            <optgroup label="Status">
-                                                                <option value="1" {{ $user->status == "1" ?
-                                                                    "selected" : "" }}>
-                                                                    Aktif
-                                                                </option>
-                                                                <option value="0" {{ $user->status == "0"
-                                                                    ? "selected" : "" }}>
-                                                                    Nonaktif
-                                                                </option>
-                                                            </optgroup>
-                                                        </select>
-                                                        @error('status')
-                                                        <div class="invalid-feedback">{{ $message }}</div>
-                                                        @enderror
-                                                    </div>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary"
-                                                        data-dismiss="modal">Close</button>
-                                                    <button type="submit" class="btn btn-primary">
-                                                        <span class="fal fa-pencil mr-1"></span>
-                                                        Ubah
-                                                    </button>
-                                                    <button type="button" class="btn btn-primary" data-toggle="modal"
-                                                        data-target="#ubah-password{{ $user->id }}" title="Ubah">
-                                                        <span class="fal fa-key"></span> Ubah Password
-                                                    </button>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="modal fade" id="ubah-password{{ $user->id }}" tabindex="-1" role="dialog"
-                                    aria-hidden="true">
-                                    <div class="modal-dialog modal-lg" role="document">
-                                        <div class="modal-content">
-                                            <form autocomplete="off" novalidate
-                                                action="/users/{{ $user->id }}/update-password" method="post"
-                                                enctype="multipart/form-data">
-                                                @method('put')
-                                                @csrf
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title">Ubah Password</h5>
-                                                    <button type="button" class="close" data-dismiss="modal"
-                                                        aria-label="Close">
-                                                        <span aria-hidden="true"><i class="fal fa-times"></i></span>
-                                                    </button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <div class="form-group">
-                                                        <label for="current_password">Password Lama</label>
-                                                        <input type="password" value="{{ old('current_password') }}"
-                                                            class="form-control @error('current_password') is-invalid @enderror"
-                                                            id="current_password" name="current_password"
-                                                            placeholder="Password Lama">
-                                                        @error('current_password')
-                                                        <div class="invalid-feedback">{{ $message }}</div>
-                                                        @enderror
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="password">Password</label>
-                                                        <input type="password" value="{{ old('password') }}"
-                                                            class="form-control @error('password') is-invalid @enderror"
-                                                            id="password" name="password" placeholder="Password">
-                                                        @error('password')
-                                                        <div class="invalid-feedback">{{ $message }}</div>
-                                                        @enderror
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="password_confirmation">Konfirmasi Password</label>
-                                                        <input type="password"
-                                                            value="{{ old('password_confirmation') }}"
-                                                            class="form-control @error('password_confirmation') is-invalid @enderror"
-                                                            id="password_confirmation" name="password_confirmation"
-                                                            placeholder="Konfirmasi Password">
-                                                        @error('password_confirmation')
-                                                        <div class="invalid-feedback">{{ $message }}</div>
-                                                        @enderror
-                                                    </div>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary"
-                                                        data-dismiss="modal">Close</button>
-                                                    <button type="submit" class="btn btn-primary">
-                                                        <span class="fal fa-pencil mr-1"></span>
-                                                        Ubah
-                                                    </button>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="modal fade" id="ubah-akses{{ $user->id }}" tabindex="-1" role="dialog"
-                                    aria-hidden="true">
-                                    <div class="modal-dialog modal-lg" role="document">
-                                        <div class="modal-content">
-                                            <form autocomplete="off" novalidate action="/users/{{ $user->id }}/akses"
-                                                method="post" enctype="multipart/form-data">
-                                                @method('put')
-                                                @csrf
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title">Ubah Akses</h5>
-                                                    <button type="button" class="close" data-dismiss="modal"
-                                                        aria-label="Close">
-                                                        <span aria-hidden="true"><i class="fal fa-times"></i></span>
-                                                    </button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <select
-                                                        class="form-control w-100 @error('role') is-invalid @enderror"
-                                                        id="single-default" name="role">
-                                                        <optgroup label="User Akses">
-                                                            <option value="superadmin" {{ $user->role == "superadmin" ?
-                                                                "selected" :
-                                                                "" }}>Super Admin</option>
-                                                            <option value="admin" {{ $user->role == "admin" ? "selected"
-                                                                :
-                                                                "" }}>Administrator</option>
-                                                            <option value="user" {{ $user->role == "user" ? "selected"
-                                                                :
-                                                                "" }}>User</option>
-                                                        </optgroup>
-                                                    </select>
-                                                    @error('role')
-                                                    <div class="invalid-feedback">{{ $message }}</div>
-                                                    @enderror
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary"
-                                                        data-dismiss="modal">Close</button>
-                                                    <button type="submit" class="btn btn-primary">
-                                                        <span class="fal fa-pencil mr-1"></span>
-                                                        Ubah
-                                                    </button>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-
                                 @endforeach
                             </tbody>
                             <tfoot>
                                 <tr>
-                                    {{-- <th style="white-space: nowrap">Foto</th> --}}
-                                    <th style="white-space: nowrap">Nama User</th>
-                                    <th style="white-space: nowrap">Username</th>
-                                    <th style="white-space: nowrap">Email</th>
-                                    <th style="white-space: nowrap">Unit</th>
+                                    <th style="white-space: nowrap">No</th>
+                                    <th style="white-space: nowrap">Jam</th>
+                                    <th style="white-space: nowrap">User yang menyerahkan</th>
+                                    <th style="white-space: nowrap">User yang menerima</th>
                                     <th style="white-space: nowrap">Aksi</th>
                                 </tr>
-                            </tfoot>
+
                         </table>
                         <!-- datatable end -->
                     </div>
@@ -702,10 +444,10 @@
 <div class="modal fade" id="default-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
-            <form autocomplete="off" novalidate action="/users" method="post" enctype="multipart/form-data">
+            <form autocomplete="off" novalidate action="/submissions" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="modal-header">
-                    <h5 class="modal-title">Tambah User</h5>
+                    <h5 class="modal-title">Tambah Submission</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true"><i class="fal fa-times"></i></span>
                     </button>
@@ -721,11 +463,11 @@
                         @enderror
                     </div>
                     <div class="form-group">
-                        <label for="username">Username</label>
-                        <input type="text" value="{{ old('username') }}"
-                            class="form-control @error('username') is-invalid @enderror" id="username" name="username"
-                            placeholder="Username">
-                        @error('username')
+                        <label for="submissionname">Submissionname</label>
+                        <input type="text" value="{{ old('submissionname') }}"
+                            class="form-control @error('submissionname') is-invalid @enderror" id="submissionname"
+                            name="submissionname" placeholder="Submissionname">
+                        @error('submissionname')
                         <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
                     </div>
@@ -774,7 +516,7 @@
                                 <option value=""></option>
                                 <option value="superadmin">Super Admin</option>
                                 <option value="admin">Admin</option>
-                                <option value="user">User</option>
+                                <option value="submission">Submission</option>
                             </optgroup>
                         </select>
                         @error('role')

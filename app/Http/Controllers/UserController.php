@@ -30,7 +30,7 @@ class UserController extends Controller
     public function akses(Request $request, User $user)
     {
         $validatedData = $request->validate([
-            'is_admin' => 'max:255',
+            'role' => 'max:255',
         ]);
 
         User::where('id', $user->id)->update($validatedData);
@@ -44,7 +44,7 @@ class UserController extends Controller
             'username' => 'required|unique:users',
             'email' => 'required|email|unique:users',
             'password' => 'required',
-            'unit_id' => 'nullable'
+            'unit_id' => 'max:255'
         ]);
 
         $validatedData['password'] = Hash::make($request['password']);
@@ -60,6 +60,7 @@ class UserController extends Controller
             'name' => 'required',
             'username' => 'required|unique:users,username,' . $user->id,
             'email' => 'required|email|unique:users,email,' . $user->id,
+            'status' => 'required',
         ]);
 
         User::where('id', $user->id)->update($validatedData);
