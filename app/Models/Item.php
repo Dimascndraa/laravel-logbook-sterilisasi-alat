@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Item extends Model
 {
     protected $guarded = ['id'];
-    protected $with = ['item_set'];
+    // protected $with = ['item_set'];
 
     use HasFactory;
 

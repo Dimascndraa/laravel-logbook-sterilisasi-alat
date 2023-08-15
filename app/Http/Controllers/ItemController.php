@@ -20,17 +20,21 @@ class ItemController extends Controller
 
     public function store(Request $request)
     {
-        // return $request;
+        $existingCount = Item::count();
+
+        // Menghasilkan kode berdasarkan jumlah data yang sudah ada
+        $code = 'ALT' . str_pad($existingCount + 1, 3, '0', STR_PAD_LEFT);
+
         $validatedData = $request->validate([
-            'foto' => "max:5120",
+            'foto' => "required|max:5120",
             'item_set_id' => "required|max:255",
             'name' => "required|max:255",
-            'code' => "required|max:255",
             'kondisi' => "required|max:255",
             'status' => "required|max:255",
         ]);
+        $validatedData['code'] = $code;
 
-        if ($request->file('foto')) {
+        if ($request->foto) {
             $validatedData['foto'] = $request->file('foto')->store('gambar-alat');
         }
 
@@ -47,9 +51,9 @@ class ItemController extends Controller
     {
         $validatedData = $request->validate([
             'foto' => "max:5120",
-            'item_sets_id' => "required|max:255",
+            'item_set_id' => "required|max:255",
             'name' => "required|max:255",
-            'code' => "required|max:255",
+            'code' => "required|unique:items,code," . $item->id,
             'kondisi' => "required|max:255",
             'status' => "required|max:255",
         ]);
@@ -57,9 +61,10 @@ class ItemController extends Controller
         if ($request->file('foto')) {
             if ($request->oldImage) {
                 Storage::delete($item->foto);
-                $validatedData['foto'] = $request->file('foto')->store('barang');
+                $validatedData['foto'] = $request->file('foto')->store('gambar-alat');
             }
         }
+
         Item::where('id', $item->id)->update($validatedData);
         return redirect('/items')->with('success', 'Alat berhasil diperbaharui!');
     }

@@ -427,8 +427,8 @@
                                     aria-hidden="true">
                                     <div class="modal-dialog modal-lg" role="document">
                                         <div class="modal-content">
-                                            <form autocomplete="off" novalidate action="/item-sets/{{ $item->id }}"
-                                                method="post">
+                                            <form autocomplete="off" novalidate action="/items/{{ $item->id }}"
+                                                method="post" enctype="multipart/form-data">
                                                 @method('put')
                                                 @csrf
                                                 <div class="modal-header">
@@ -440,17 +440,40 @@
                                                 </div>
                                                 <div class="modal-body">
                                                     <div class="form-group">
+                                                        <label for="foto2">Gambar</label>
+                                                        <input type="hidden" name="oldImage" value="{{ $item->foto }}">
+                                                        @if ($item->foto)
+                                                        <img src="{{ asset('storage/' . $item->foto) }}"
+                                                            class="image-preview2 img-fluid mb-3 col-sm-5 d-block"
+                                                            alt="{{ $item->foto }}">
+                                                        @else
+                                                        <img class="image-preview2 img-fluid mb-3 col-sm-5 d-block">
+                                                        @endif
+                                                        <div class="custom-file">
+                                                            <input type="file" class="custom-file-input" id="foto2"
+                                                                name="foto" onchange="previewImage2()">
+                                                            <label class="custom-file-label" for="foto">Pilih Gambar
+                                                                Galeri</label>
+                                                        </div>
+                                                        @error('foto')
+                                                        <p class="text-danger">{{ $message }}</p>
+                                                        @enderror
+                                                    </div>
+                                                    <div class="form-group">
                                                         <label class="form-label" for="ubahItemSet">
                                                             Set Alat
                                                         </label>
                                                         <select class="form-control w-100" id="ubahItemSet"
-                                                            name="item_sets_id">
+                                                            name="item_set_id">
                                                             @foreach ($item_sets as $item_set)
                                                             <option value="{{ $item_set->id }}">
                                                                 {{ $item_set->name }}
                                                             </option>
                                                             @endforeach
                                                         </select>
+                                                        @error('item_set_id')
+                                                        <p class="text-danger">{{ $message }}</p>
+                                                        @enderror
                                                     </div>
                                                     <div class="form-group">
                                                         <label for="name">Nama {{ $title }}</label>
@@ -465,7 +488,8 @@
                                                         <label for="code">Kode {{ $title }}</label>
                                                         <input type="text" value="{{ old('code', $item->code) }}"
                                                             class="form-control @error('code') is-invalid @enderror"
-                                                            id="code" name="code" placeholder="Kode {{ $title }}"
+                                                            id="code" name="code" readonly
+                                                            placeholder="Kode {{ $title }}"
                                                             onkeyup="this.value = this.value.toUpperCase()">
                                                         @error('code')
                                                         <div class="invalid-feedback">{{ $message }}</div>
@@ -480,6 +504,9 @@
                                                             <option value="baik">Baik</option>
                                                             <option value="rusak">Rusak</option>
                                                         </select>
+                                                        @error('kondisi')
+                                                        <p class="text-danger">{{ $message }}</p>
+                                                        @enderror
                                                     </div>
                                                     <div class="form-group">
                                                         <label class="form-label" for="ubahStatus">
@@ -494,6 +521,9 @@
                                                                 }}>
                                                                 Nonaktif</option>
                                                         </select>
+                                                        @error('status')
+                                                        <p class="text-danger">{{ $message }}</p>
+                                                        @enderror
                                                     </div>
                                                 </div>
                                                 <div class="modal-footer">
@@ -569,15 +599,6 @@
                             class="form-control @error('name') is-invalid @enderror" id="name" name="name"
                             placeholder="Nama {{ $title }}">
                         @error('name')
-                        <div class="invalid-feedback">{{ $message }}</div>
-                        @enderror
-                    </div>
-                    <div class="form-group">
-                        <label for="code">Kode {{ $title }}</label>
-                        <input type="text" value="{{ old('code') }}"
-                            class="form-control @error('code') is-invalid @enderror" id="code" name="code"
-                            placeholder="Kode {{ $title }}" onkeyup="this.value = this.value.toUpperCase()">
-                        @error('code')
                         <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
                     </div>
@@ -694,6 +715,20 @@
         function previewImage() {
             const image = document.querySelector('#foto');
             const imgPreview = document.querySelector('.image-preview')
+
+            imgPreview.style.display = 'block';
+
+            const oFReader = new FileReader();
+            oFReader.readAsDataURL(image.files[0])
+
+            oFReader.onload = function(oFREvent) {
+                imgPreview.src = oFREvent.target.result;
+            }
+        }
+
+        function previewImage2() {
+            const image = document.querySelector('#foto2');
+            const imgPreview = document.querySelector('.image-preview2')
 
             imgPreview.style.display = 'block';
 

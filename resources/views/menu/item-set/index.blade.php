@@ -452,7 +452,7 @@
                                                         <label for="code" id="code">Kode Set Alat</label>
                                                         <input type="text" value="{{ old('code', $item_set->code) }}"
                                                             class="form-control @error('code') is-invalid @enderror"
-                                                            id="code" name="code" placeholder="Kode Set Alat"
+                                                            id="code" name="code" readonly placeholder="Kode Set Alat"
                                                             onkeyup="this.value = this.value.toUpperCase()">
                                                         @error('code')
                                                         <div class="invalid-feedback">{{ $message }}</div>
@@ -525,15 +525,6 @@
                             class="form-control @error('name') is-invalid @enderror" id="name" name="name"
                             placeholder="Nama Set Alat">
                         @error('name')
-                        <div class="invalid-feedback">{{ $message }}</div>
-                        @enderror
-                    </div>
-                    <div class="form-group">
-                        <label for="code">Kode Set Alat</label>
-                        <input type="text" value="{{ old('code') }}"
-                            class="form-control @error('code') is-invalid @enderror" id="code" name="code"
-                            placeholder="Kode Set Alat" onkeyup="this.value = this.value.toUpperCase()">
-                        @error('code')
                         <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
                     </div>

@@ -38,11 +38,17 @@ class ItemSetController extends Controller
      */
     public function store(Request $request)
     {
+        // Mengecek apakah sudah ada data dalam tabel item_set
+        $existingCount = ItemSet::count();
+
+        // Menghasilkan kode berdasarkan jumlah data yang sudah ada
+        $code = 'SET' . str_pad($existingCount + 1, 3, '0', STR_PAD_LEFT);
+
         $validatedData = $request->validate([
             'name' => 'max:255|required',
-            'code' => 'max:255|required|unique:item_sets',
             'status' => 'required',
         ]);
+        $validatedData['code'] = $code;
 
         ItemSet::create($validatedData);
         return redirect('/item-sets')->with('success', 'Set Alat berhasil ditambahkan!');
